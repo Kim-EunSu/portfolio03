@@ -39,14 +39,20 @@
 .sec1{
     width: 57vh;
     height: 70vh;
-    background-size: cover;
-    background-image: url(../img/home.jpg);
+    /* background-size: cover;
+    background-image: url(../img/home.jpg); */
 }
+
+.sec1 img{
+    height: auto;
+    width: 50vh;
+}
+
 
 .sec1 .circle{
     position: absolute;
-    top: 53vh;
-    left: 43vh;
+    top: 54vh;
+    left: 36vh;
     width: 28vh;
     height: 28vh;
     color: #fff;
@@ -115,6 +121,9 @@
     height: 100vh;
     vertical-align: top;
 }
+
+/* reveal */
+
 
 .section3_cont{
     position: relative;
