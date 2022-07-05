@@ -8,5 +8,5 @@ const sr = ScrollReveal({
 
 /*SCROLL HOME*/
 sr.reveal(".sec1 img", { origin: "left", delay: 100 });
-sr.reveal(".circle", { origin: "right", delay: 400 });
-sr.reveal(".sec1_txt", { origin: "top", delay: 100 });
+sr.reveal(".circle", { origin: "right", delay: 100 });
+sr.reveal(".sec1_txt", { origin: "top", delay: 200 });

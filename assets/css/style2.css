@@ -1,0 +1,522 @@
+/* #section1 */
+#section1{
+    position: relative;
+}
+
+.sec1 img{
+    width: 30vw;
+    height: 40vw;
+}
+
+
+.sec1 .circle{
+    position: absolute;
+    top: 29vw;
+    left: 22vw;
+    width: 16vw;
+    height: 16vw;
+    color: #fff;
+    text-align: center;
+    font-size: 2vw;
+    line-height: 16vw;
+    border-radius: 50%;
+    background: #1E1E1E;
+    text-transform: uppercase;
+    font-family: 'Jura', sans-serif;
+}
+
+.sec1_txt {
+    display: inline-block;
+    position: absolute;
+    width: 23vw;
+    left: 50vw;
+    margin-top: 20px;
+    font-size: 1.2vw;
+    line-height: 151%;
+    font-family: 'IropkeBatang';
+
+}
+
+.sec1_txt em{
+    float: right;
+    margin-top: 20px;
+    opacity: .6;
+}
+
+
+
+/* #section2 */
+#section2{
+    height: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: bisque; */
+}
+
+
+.logo_title{
+    position: absolute;
+    margin: 20vw 5vw;
+    font-size: 18vw;
+    line-height: 0.8;
+    letter-spacing: -2vh;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    z-index: 10;
+}
+
+/* #section3 */
+#section3{
+    position: relative;
+    display: flex;
+    padding: 2vw;
+}
+
+#section3 img{
+    width: 40vw;
+    height: auto;
+    margin-right: 2vw;    
+    vertical-align: top;
+}
+
+
+.section3_cont{
+    position: relative;
+}
+
+ .about{
+    display: inline-block;
+    font-size: 2vw;
+    line-height: 150%;
+    /* word-break: keep-all; */
+    font-family: 'ChosunNm';
+}
+
+ .about_bottom{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+}
+
+.about_bottom_txt{
+    width: 25vw;
+    opacity: .6;
+    font-size: 1vw;
+    margin-right: 3vw;
+    /* margin-bottom: 20px; */
+    display: inline-block;
+    font-family: 'NexonLv1Gothic';
+}
+
+.about_bottom_txt:last-child{
+    margin-right: 0;
+}
+
+
+
+/* #section4 */
+#section4{
+    position: relative;
+    padding: 2vw;
+    height: 210vw;
+    /* background: rgb(239, 255, 181); */
+}
+
+#section4 .site:first-child{
+    margin-top: 10vw;
+}
+
+.site{
+    position: relative;
+    display: flex;
+    height: 55vw;
+    margin-top: 10vw;
+    /* border: 1px solid blue; */
+    box-sizing: border-box;
+}
+
+.title{
+    position: absolute;
+    top: 0;
+    left: 5vw;
+    font-size: 7vw;
+    line-height: 0;
+    white-space: nowrap;
+    letter-spacing: -5px;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+
+.title::before{
+    display: inline-block;
+    text-align: center;
+    height: 15vw;
+    content: "";
+    background-color: #000;
+    width: 1px;
+
+}
+
+.main_img{
+    display: inline-block;
+    width: auto;
+    height: 55vw;
+    margin-left: 10vw;
+    vertical-align: top;
+}
+
+.sub_img{
+    position: absolute;
+    top: 33vw;
+    left: 40vw;
+    width: auto;
+    height: 17vw;
+}
+
+.site_cir{
+    position: absolute;
+    top: 36vw;
+    left: 61vw;
+    width: 11vw;
+    height: 11vw;
+    color: #fff;
+    background: #000;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 2vw;
+    line-height: 11vw;
+    text-transform: uppercase;
+    font-family: 'Jura', sans-serif;
+}
+
+.site_cont{
+    position: absolute;
+    display: inline-block;
+    top: 2vw;
+    right: 5vw;
+    width: 33vw;
+}
+
+.site_cont .site_subtit{
+    font-size: 3vw;
+    font-weight: bold;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-family: 'Jura', sans-serif;
+}
+
+.site_cont .site_desc{
+    display: inline-block;
+    font-size: 1.2vw;
+    line-height: 150%;
+    margin: 0.5vw 0 1vw 0;
+    word-break: keep-all;
+    font-family: 'IropkeBatang';
+}
+
+.btn{
+    width: 9vw;
+    height: 2.5vw;
+    font-size: 1.3vw;
+    color: #fff;
+    background: #000;
+    line-height: 2.5vw;
+    text-align: center;
+    border-radius: 100px;
+    text-transform: uppercase;
+    font-family: 'Jura', sans-serif;
+}
+
+
+/* #section5 */
+#section5{
+    padding: 2vw;
+    height: 200vw;
+    background: #1e1e1e;
+}
+
+#section5 .site{
+    margin-left: 0;
+    margin-top: 10vw;
+    /* background: #ccc; */
+}
+
+#section5 .title{
+    color: #fff;
+  
+}
+
+#section5 .title::before{
+    height: 12vw;
+    background-color: #fff;
+}
+
+.script_cont{
+    margin-left: 10vw;
+    position: relative;
+}
+
+#section5 .site_cir{
+    position: absolute;
+    top: 2vw;
+    left: 64vw;
+    width: 13vw;
+    height: 13vw;
+    color: #000;
+    font-size: 2.5vw;
+    line-height: 13vw;
+    background: #fff;
+}
+
+.script_img1{
+    width: auto;
+    height: 30vw;
+}
+
+.script_img2{
+    position: absolute;
+    width: auto;
+    height: 15vw;
+    top: 21vw;
+    right: 3vw;
+}
+
+.script_tit{
+    width: 100%;
+    color: #fff;
+    font-size: 3vw;
+    font-weight: bold;
+    display: inline-block;
+    margin: 1vw 0 0.5vw 0;
+    text-transform: uppercase;
+    font-family: 'Jura', sans-serif;
+}
+
+
+.script_desc{
+    width: 48vw;
+    color: #fff;
+    font-size: 1.2vw;
+    line-height: 150%;
+    display: inline-block;
+    font-family: 'IropkeBatang';
+}
+
+
+.script_cont .btn{
+    background: #fff;
+    color: #000;
+}
+
+
+
+/* #section6 */
+#section6{
+    padding: 2vw;
+    position: relative;
+    height: 200vw;
+    background: #CECECE;
+}
+
+#section6 .title{
+    margin-top: 12vw;
+}
+
+#section6 .title::before{
+    height: 12vw;
+}
+
+
+.front_img1{
+    width: auto;
+    height: 25vw;
+    margin-top: 12vw;
+    margin-left: 10vw;
+}
+
+.front_img2{
+    position: absolute;
+    width: auto;
+    height: 20vw;
+    top: 28vw;
+    left: 42vw;
+}
+
+#section6 .site_cir{
+    position: absolute;
+    top: 32vw;
+    left: 52vw;
+}
+
+.front_cont{
+    position: absolute;
+    left: 60vw;
+    top: 3vw;
+}
+
+.front_tit{
+    width: 100%;
+    color: #000;
+    font-size: 3vw;
+    font-weight: bold;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Jura', sans-serif;
+}
+
+
+.front_desc{
+    width: 30vw;
+    color: #000;
+    font-size: 1.2vw;
+    line-height: 150%;
+    word-break: keep-all;
+    display: inline-block;
+    margin: 0.5vw 0 1vw 0;
+    font-family: 'IropkeBatang';
+}
+
+/* #section7 */
+#section7{
+    height: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: bisque; */
+}
+
+
+.logo_title{
+    position: absolute;
+    margin: 20vw 5vw;
+    font-size: 18vw;
+    line-height: 0.8;
+    letter-spacing: -2vh;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    z-index: 10;
+}
+
+/* section8 */
+#section8{
+    display: flex;
+    padding: 2vw;
+    position: relative;
+    background: #1e1e1e;
+}
+
+#section8 > img{
+    width: 40vw;
+    height: auto;
+    margin-right: 2vw;
+    vertical-align: top;
+    display: inline-block;
+}
+ 
+
+#section8 .about{
+    display: flex;
+    color: #fff;
+}
+
+#section8 .about_text{
+    display: flex;
+    flex-direction: column;
+}
+
+#section8 .about_bottom{
+    color: #fff;
+    font-family: 'IropkeBatang';
+
+}
+
+#section8 .email{
+    display: inline-block;
+    width: 18vw;
+    height: 4vw;
+    margin-top: 2vw;
+    font-size: 1.7vw;
+    line-height: 2;
+    color: #bfff07;
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid #bfff07;
+    transition: all .3s ease-in;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+#section8 .email:hover{
+   background: #bfff07;
+   color: #1E1E1E;
+}
+
+
+/* #section9 */
+#section9{
+    position: relative;
+    padding: 2vw;
+    height: 60vw;
+    background: #1e1e1e;
+}
+
+#section9 .home {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 30vw;
+    height: 40vw;
+}
+
+#section9 .about_bottom{
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 23vw;
+    margin-top: 5vw;
+    font-size: 1.2vw;
+    line-height: 151%;
+    flex-direction: column;
+    font-family: 'IropkeBatang';
+}
+
+.about_text{
+    color: #fff;
+    margin-bottom: 2vw;
+}
+
+.about_bottom_tit{
+    font-size: 2vw;
+    margin-bottom: 1vw;
+    display: inline-block;
+}
+
+
+#section9 .about_bottom_txt {
+    width: 25vw;
+    font-size: 1vw;
+    display: inline-block;
+    font-family: 'IropkeBatang';
+}
+
+
+#section9 .circle_port{
+    position: absolute;
+    bottom: 29vw;
+    right: 22vw;   
+    width: 16vw;
+    height: 16vw;
+    color: #1e1e1e;
+    text-align: center;
+    font-size: 2vw;
+    line-height: 16vw;
+    border-radius: 50%;
+    background: #fff;
+    text-transform: uppercase;
+    font-family: 'Jura', sans-serif;
+}
+
