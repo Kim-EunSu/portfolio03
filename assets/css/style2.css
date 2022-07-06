@@ -57,7 +57,6 @@
 
 .logo_title{
     position: absolute;
-    margin: 20vw 5vw;
     font-size: 18vw;
     line-height: 0.8;
     letter-spacing: -2vh;
@@ -103,9 +102,8 @@
 .about_bottom_txt{
     width: 25vw;
     opacity: .6;
-    font-size: 1vw;
+    font-size: 1.2vw;
     margin-right: 3vw;
-    /* margin-bottom: 20px; */
     display: inline-block;
     font-family: 'NexonLv1Gothic';
 }
@@ -389,19 +387,6 @@
     /* background: bisque; */
 }
 
-
-.logo_title{
-    position: absolute;
-    margin: 20vw 5vw;
-    font-size: 18vw;
-    line-height: 0.8;
-    letter-spacing: -2vh;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Cormorant Garamond', serif;
-    z-index: 10;
-}
-
 /* section8 */
 #section8{
     display: flex;
@@ -460,7 +445,7 @@
 #section9{
     position: relative;
     padding: 2vw;
-    height: 60vw;
+    height: 70vw;
     background: #1e1e1e;
 }
 
@@ -519,4 +504,37 @@
     text-transform: uppercase;
     font-family: 'Jura', sans-serif;
 }
+
+
+/* 미디어쿼리 */
+@media (max-width:700px){
+    #section3 {
+        align-items: center;
+        justify-content: center;
+    }
+    .about {
+        font-size: 2.5vw;
+    }   
+  
+    .about_bottom_txt {
+       display: none;
+    }
+
+    .script_tit {
+        margin: 1.5vw 0 1vw 0;
+    }
+
+    .script_desc {
+        width: 61vw;
+    }
+
+    #section6 .site_cir {
+        position: absolute;
+        top: 42vw;
+        left: 36vw;
+    }
+
+
+ }
+
 
