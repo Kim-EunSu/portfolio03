@@ -306,6 +306,7 @@
 
 
 .script_cont .btn{
+    display: none;
     background: #fff;
     color: #000;
 }
@@ -484,6 +485,8 @@
 #section9 .about_bottom_txt {
     width: 25vw;
     font-size: 1vw;
+    line-height: 151%;
+
     display: inline-block;
     font-family: 'IropkeBatang';
 }
@@ -507,25 +510,151 @@
 
 
 /* 미디어쿼리 */
-@media (max-width:700px){
+@media (max-width:800px){
+
+    .sec1_txt{
+        width: 42vw;
+        font-size: 2vw; 
+    }
+
+
+
+
     #section3 {
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
+
+    #section3 img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        vertical-align: top;
+    }
+
     .about {
-        font-size: 2.5vw;
-    }   
+        margin-top: 2vw;
+        font-size: 3vw;
+    }
+      
   
     .about_bottom_txt {
        display: none;
     }
 
+    #section4{
+        height: 100%;
+    }
+
+    .site {
+        height: 100%;
+        margin-top: 15vw;
+        border: 1px solid red;
+    }
+
+    .title{
+        left: 4vw;
+        font-size: 9vw;
+    }
+
+
+
+    .main_img {
+        width: 55vw;
+        height: initial;
+        display: inline-block;
+        margin-left: 10vw;
+        vertical-align: top;
+    }
+
+    .site_img{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+    }
+
+    .site_cont {
+        position: initial;
+        margin-top: 2vw;
+        margin-left: 10vw;
+        width: 67vw;
+        top: 80vw;
+        left: 10vw;
+    }
+
+    .site_cont .site_subtit{
+        font-size: 4vw;
+    }
+
+    .site_cont .site_desc{
+        font-size: 2vw;
+        margin: 1.5vw 0 2.5vw 0;
+    }
+
+    .btn {
+        position: relative;
+        width: 12vw;
+        height: 4vw;
+        font-size: 2vw;
+        line-height: 4vw;
+    }
+
+    .btn::after{
+        position: absolute;
+        left: 15vw;
+        content: "site";
+        width: 12vw;
+        height: 4vw;
+        color: #fff;
+        background: #000;
+        text-align: center;
+        border-radius: 100px;
+        text-transform: uppercase;
+        font-family: 'Jura', sans-serif;
+    }
+
+    .site_cir{
+        display: none;
+    }
+
+    #section5 {
+        height: 100%;
+    }
+
+
+    #section5 .site{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 15vw;
+    }
+
+    .script_img1 {
+        width: 100%;
+        height: auto;
+    }
+
+    .sub_img{
+        display: none;
+    }
+
+    
+
+    .script_img2{
+        display: none;
+    }
+
     .script_tit {
-        margin: 1.5vw 0 1vw 0;
+        font-size: 4vw;
+        margin: 2vw 0 1.5vw 0;
     }
 
     .script_desc {
-        width: 61vw;
+        width: 67vw;
+        font-size: 2vw;
+        margin: 1.5vw 0 2.5vw 0;
     }
 
     #section6 .site_cir {
@@ -533,6 +662,112 @@
         top: 42vw;
         left: 36vw;
     }
+
+    .script_cont .btn{
+        display: block;
+      
+    }
+
+    .script_cont .btn::after{
+        display: block;
+        top: 0;
+        color: #000;
+        background: #fff;
+      
+    }
+    
+
+    #section6{
+        height: 100%;
+    }
+
+    #section6 .site{
+        display: block;
+        overflow: hidden;
+    }
+
+
+
+    #section6 .title {
+        margin-top: 0;
+    }
+
+    .front_img1{
+        width: 90%;
+        height: auto;
+        margin-top: 0;
+
+    }
+
+    .front_img2{
+        display: none;
+    }
+
+    .front_cont {
+        position: initial;
+        margin-left: 10vw;
+    }
+
+
+    .front_tit{
+        font-size: 4vw;
+        margin: 2vw 0 1.5vw 0;
+    }
+
+    .front_desc {
+        width: 67vw;
+        font-size: 2vw;
+        margin: 1.5vw 0 2.5vw 0;
+    }
+
+    #section8{
+        flex-direction: column;
+    }
+
+    #section8 > img{
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+    }
+    
+    #section8 .email {
+        display: inline-block;
+        width: 30vw;
+        height: 7vw;
+        margin-top: 2vw;
+        font-size: 3vw;
+    }
+
+    
+
+    .about_text {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5vw;
+    }
+
+    .about_bottom_tit {
+        font-size: 3.5vw;
+        margin-bottom: 2vw;
+    }
+
+    #section9 .about_bottom_txt {
+        width: 37vw;
+        font-size: 2vw;
+    }
+
+    .about_bottom_txt{
+        width: 100%;
+    }
+   
+
+
+
+  
+       
+    
+
+
 
 
  }
