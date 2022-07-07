@@ -550,7 +550,7 @@
     .site {
         height: 100%;
         margin-top: 15vw;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     .title{
