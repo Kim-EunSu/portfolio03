@@ -119,10 +119,13 @@
     margin-left: 10vh;
 }
 
+.about:first-child{
+    margin-top: 20px;
+}
+
  .about{
     display: inline-block;
     width: 144vh;
-    margin-top: 20px;
     font-size: 4.6vh;
     line-height: 150%;
     word-break: keep-all;

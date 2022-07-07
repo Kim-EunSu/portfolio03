@@ -517,6 +517,10 @@
         font-size: 2vw; 
     }
 
+    .logo_title {
+        letter-spacing: -1vw;
+    }
+
 
 
 
@@ -545,6 +549,7 @@
 
     #section4{
         height: 100%;
+        margin-bottom: 15vw;
     }
 
     .site {
@@ -556,6 +561,8 @@
     .title{
         left: 4vw;
         font-size: 9vw;
+        letter-spacing: -.5vw;
+      
     }
 
 
@@ -621,6 +628,7 @@
 
     #section5 {
         height: 100%;
+
     }
 
 
@@ -631,8 +639,12 @@
         margin-top: 15vw;
     }
 
+    #section5 .site:last-child{
+        margin-bottom: 15vw;
+    }
+
     .script_img1 {
-        width: 100%;
+        width: 90%;
         height: auto;
     }
 
@@ -657,11 +669,7 @@
         margin: 1.5vw 0 2.5vw 0;
     }
 
-    #section6 .site_cir {
-        position: absolute;
-        top: 42vw;
-        left: 36vw;
-    }
+ 
 
     .script_cont .btn{
         display: block;
@@ -686,14 +694,22 @@
         overflow: hidden;
     }
 
+    #section6 .site:last-child{
+        margin-bottom: 15vw;
+    }
 
+    #section6 .site_cir {
+        position: absolute;
+        top: 42vw;
+        left: 36vw;
+    }
 
     #section6 .title {
         margin-top: 0;
     }
 
     .front_img1{
-        width: 90%;
+        width: 80%;
         height: auto;
         margin-top: 0;
 
