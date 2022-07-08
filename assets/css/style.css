@@ -159,6 +159,7 @@
 }
 
 .site{
+    margin-left: 20vh;
     position: relative;
     display: flex;
     width: 250vh;
@@ -175,7 +176,7 @@
     font-size: 27.2vh;
     line-height: 20vh;
     letter-spacing: -1vh;
-    transform: rotate(-180deg);
+    transform: rotate(180deg);
     writing-mode: vertical-rl;
     white-space: nowrap;
     font-family: 'Cormorant Garamond', serif;
@@ -202,7 +203,7 @@
     display: inline-block;
     width: auto;
     height: 100vh;
-    margin-left: 20vh;
+    margin-left: 10vh;
     vertical-align: top;
 }
 
@@ -286,6 +287,10 @@
     background: #1e1e1e;
 }
 
+#section5 .site:first-child{
+    margin-left: 30vh;
+}
+
 #section5 .site{
     width: 230vh;
     margin-left: 0;
@@ -297,10 +302,6 @@
   
 }
 
-#section5 .title:first-child{
-    margin-left: 10vh;
-}
-
 #section5 .title::before{
     background-color: #fff;
 }
@@ -308,7 +309,7 @@
 
 
 .script_cont{
-    margin-left: 20vh;
+    margin-left: 10vh;
     position: relative;
     /* border: 3px solid salmon; */
     box-sizing: border-box;
@@ -395,8 +396,12 @@
     /* background: #999; */
 }
 
+#section6 .site:first-child{
+    margin-left: 30vh;
+}
+
 #section6 .title {
-    margin-right: 20vh;
+    margin-right: 10vh;
 }
 
 .front_img1{

@@ -76,7 +76,7 @@
 
                  <section id="section4">
                     <div class="site">
-                            <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">webstandard</span>
+                            <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2" >webstandard</span>
                             <div class="site_img">
                                 <img src="img/standard1.svg" class="main_img" alt="표준형이미지1">
                                 <div class="site_rt_img" data-scroll data-scroll-speed="2">
@@ -150,7 +150,7 @@
 
                   <section id="section5">
                     <div class="site">
-                        <span class="title">script</span>
+                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2" >script</span>
                         <div class="script_cont">
                             <img src="img/tetris1.svg" class="script_img1" alt="테트리스이미지1">
                             <div class="site_rt_cir" data-scroll data-scroll-speed="1.2" >
@@ -175,7 +175,7 @@
                     <!-- //site - tetris -->
 
                      <div class="site">
-                        <span class="title">script</span>
+                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">script</span>
                         <div class="script_cont">
                             <img src="img/musicplayer1.svg" class="script_img1" alt="뮤직플레이어이미지1">
                             <div class="site_rt_cir" data-scroll data-scroll-speed="1.2" >
@@ -201,7 +201,7 @@
                     <!-- //site - musicplayer -->
 
                      <div class="site">
-                        <span class="title">script</span>
+                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">script</span>
                         <div class="script_cont">
                             <img src="img/typing1.svg" class="script_img1" alt="타이핑게임이미지1">
                             <div class="site_rt_cir" data-scroll data-scroll-speed="1.2" >
@@ -228,7 +228,7 @@
 
               <section id="section6">
                     <div class="site">
-                        <span class="title">php site</span>
+                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">php site</span>
                             <img src="img/php1.svg" class="front_img1" alt="php사이트1">
                             <div class="front_rt_img" data-scroll data-scroll-speed="1">
                                 <img src="img/php2.svg" class="front_img2" alt="php사이트2">
@@ -253,7 +253,7 @@
                     <!-- //site - php -->
 
                       <div class="site">
-                        <span class="title">react site </span>
+                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">react site </span>
                             <img src="img/react1.svg" class="front_img1" alt="react사이트1">
                             <div class="front_rt_img" data-scroll data-scroll-speed="1">
                                 <img src="img/react2.svg" class="front_img2" alt="react사이트2">
@@ -275,7 +275,7 @@
                     <!-- //site - react -->
 
                      <div class="site">
-                        <span class="title">vue site </span>
+                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">vue site </span>
                             <img src="img/vue1.jpg" class="front_img1" alt="vue사이트1">
                             <div class="front_rt_img" data-scroll data-scroll-speed="1">
                                 <img src="img/vue2.svg" class="front_img2" alt="vue사이트2">
@@ -393,9 +393,9 @@
         },
         });
 
-        tl.from(".sec1 img", { opacity: 0, x: "-100%" }, );
-        tl.from(".circle", { opacity: 0, x: "100%" }, "-=1");
-        tl.from(".sec1_txt", { opacity: 0, y: -40, stagger: 0.4 });
+        tl.from(".sec1 img", { opacity: 0, x: "-100%" } );
+        tl.from(".circle", { opacity: 0, y: "100%" }, "-=1");
+        tl.from(".sec1_txt", { opacity: 0, y: -50, stagger: 0.4 });
 
         tl2.from(".animate", { opacity: 0, y: "100%", stagger: .2 });
         tl2.from(".about_bottom", { opacity: 0, y: "100%", stagger: .2 });

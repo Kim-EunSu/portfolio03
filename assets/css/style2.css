@@ -144,7 +144,7 @@
     white-space: nowrap;
     letter-spacing: -5px;
     writing-mode: vertical-rl;
-    transform: rotate(-180deg);
+    transform: rotate(180deg);
     font-family: 'Cormorant Garamond', serif;
 }
 

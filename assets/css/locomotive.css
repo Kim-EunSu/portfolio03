@@ -36,18 +36,16 @@ html.has-scroll-smooth {
     height: 100vh;
     display: inline-block;
 
-
   }
   
-  [data-scroll-direction="vertical"] [data-scroll-section] {
+
+  [data-scroll-direction="vertical"] [data-scroll-section]{
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: top;
     /* white-space: nowrap; */
-    height: 100%;
-    
-
-
-
   }
 
-  
+
+
+ 
+
