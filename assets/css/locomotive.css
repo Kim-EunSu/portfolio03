@@ -35,6 +35,7 @@ html.has-scroll-smooth {
   [data-scroll-direction="vertical"] [data-scroll-container] {
     height: 100vh;
     display: inline-block;
+    
 
   }
   

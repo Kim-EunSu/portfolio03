@@ -2,6 +2,27 @@
     display: flex;
 }
 
+.fixed {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scroll {
+    position: fixed;
+    right: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: rgba(160, 160, 160, 0.3);
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
 /* 테두리 */
  /* .border1{
     position: absolute;
