@@ -10,7 +10,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/locomotive.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.5.0/styles/color-brewer.min.css">
 
     <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -22,8 +24,6 @@
 
 <body>
     <main data-scroll-container>
-        <div class="scroll fixed">000</div>
-
             <div class="section_wrap">
                   <section id="section1">
                     <div class="sec1">
@@ -78,7 +78,7 @@
 
                  <section id="section4">
                     <div class="site">
-                            <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2" >webstandard</span>
+                            <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2" >webstandard webstandard webstandard webstandard webstandard</span>
                             <div class="site_img">
                                 <img src="img/standard1.svg" class="main_img" alt="표준형이미지1">
                                 <div class="site_rt_img" data-scroll data-scroll-speed="2">
@@ -95,14 +95,160 @@
                                     <span class="site_subtit">webstandatrd site</span>
                                     <span class="site_desc">
                                         웹표준과 웹접근성을 자가 불편없이 준수하여 작업한 웹표준 사이트 입니다. IR 효과, 대체텍스트 등 넣어 모든 사용 사이트를 이용 할 수 있도록 제작하였습니다. SLICK슬라이드와 LIGHT BOX 플러그인을 이용하여 동적인 효과를 주었습니다.</span>
-                                        <a href="https://kim-eunsu.github.io/standard/assets/"><div class="btn">code</div></a>
                                 </div>
-                            </div> 
-                    </div>  
+                                <!-- //site_cont -->
+                                <div class="source">
+                                    <button class="source-btn1">code</button>
+                                    <div id="modal1">
+                                        <div class="modal-wrap">
+                                            <div class="modal-cont">
+                                                <div class="code-view">
+                                                    <div class="view-header">
+                                                        <span class="close"></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                    <div class="view-title">
+                                                        <ul>
+                                                            <li class="active"><a href="#">html</a></li>
+                                                            <li class="active"><a href="#">css</a></li>
+                                                            <li class="active"><a href="#">javascript</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="view-cont">
+                                                        <div>
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div id="header"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="header"&gt;
+                &lt;div class="header-menu"&gt;
+                    &lt;a href="https://wiss.tistory.com/"&gt;Desinger&lt;/a&gt;
+                    &lt;a href="https://webstoryboy.co.kr/"&gt;Publisher&lt;/a&gt;
+                    &lt;a href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw"&gt;Youtube&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;!-- //헤더 메뉴 --&gt;
+                &lt;div class="header-tit"&gt;
+                    &lt;h1&gt;Professional Publisher &amp; Designer&lt;/h1&gt;&lt;br&gt;
+                    &lt;a href="https://webstoryboy.co.kr/"&gt;webstoryboy.co.kr&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;!-- //헤더 타이틀 --&gt;
+                &lt;div class="header-icon"&gt;
+                    &lt;a href="#" class="icon1"&gt;&lt;span class="ir_pm"&gt;icon1&lt;/span&gt;&lt;/a&gt;
+                    &lt;a href="#" class="icon2"&gt;&lt;span class="ir_pm"&gt;icon2&lt;/span&gt;&lt;/a&gt;
+                    &lt;a href="#" class="icon3"&gt;&lt;span class="ir_pm"&gt;icon3&lt;/span&gt;&lt;/a&gt;
+                    &lt;a href="#" class="icon4"&gt;&lt;span class="ir_pm"&gt;icon4&lt;/span&gt;&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;!-- //헤더 아이콘 --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- //header --&gt;
+</code></pre>
+                                                        </div>
+
+                                                        <div>
+<pre><code class="language-css">/* 헤더 */
+.header .header-menu {
+    text-align: right;
+}
+
+.header .header-menu a {
+    color: #fff;
+    padding: 10px 0px 10px 13px;
+    display: inline-block;
+}
+
+.header .header-menu a:hover {
+    color: #666;
+}
+
+.header .header-tit {
+    text-align: center;
+}
+
+.header .header-tit h1 {
+    background-color: #4aa8d4;
+    font-size: 28px;
+    padding: 5px 20px 6px 20px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.header .header-tit a {
+    display: inline-block;
+    background-color: #2698cb;
+    font-size: 18px;
+    color: #fff;
+    padding: 5px 20px 6px 20px;
+    margin-top: -5px;
+}
+
+.header .header-icon {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.header .header-icon a {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background: url(../img/icon.png);
+    margin: 0 3px;
+}
+</code></pre>
+                                                        </div>
+                                                        <div>
+<pre><code class="language-javascript">//레이어 팝업
+$('.layer').click(function (e) {
+    e.preventDefault();
+    $('#layer').css('display', 'block');
+    // $("#modal").show();
+    // $("#modal").fadeIn();
+    // $("#modal").slideDown();
+});
+$('#layer .close').click(function (e) {
+    e.preventDefault();
+    $('#layer').css('display', 'none');
+    // $("#modal").hide();
+    // $("#modal").fadeOut();
+    // $("#modal").slideUp();
+});
+
+//탭 메뉴
+var $tab_list = $('.tab_menu');
+
+$tab_list.find('ul ul').hide();
+$tab_list.find('li.active>ul').show();
+
+function tabMenu(e) {
+    e.preventDefault();
+    var $this = $(this);
+    $this.next('ul').show().parent('li').addClass('active').siblings('li').removeClass('active').find('>ul').hide();
+}
+$tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);                      
+</code></pre>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                    <!-- //view-cont -->
+                                                </div>
+                                            </div>
+                                        <button class="modal-close1">닫기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div> 
                     <!-- //site -  standard -->
 
+
                     <div class="site">
-                            <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">responsive</span>
+                            <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">responsive responsive responsive responsive responsive</span>
                             <div class="site_img">
                                 <img src="img/responsive1.svg" class="main_img" alt="반응형이미지1">
                                 <div class="site_rt_img" data-scroll data-scroll-speed="2">
@@ -119,14 +265,163 @@
                                     <span class="site_subtit">responsive  site</span>
                                     <span class="site_desc">
                                         다양한 디바이스의 대응하여 화면 크기에 따라 반응하도록 작업한 반응형 사이트 입니다. 미디어쿼리를 이용하여 레이아웃의 배치와 디자인을 다르게 하고 CSS애니메이션을 이용한 마우스오버 애니메이션 효과를 볼 수 있습니다.</span>
-                                        <a href="https://kim-eunsu.github.io/responsive/"><div class="btn">code</div></a>
+                                </div>
+                                <!-- //site_cont -->
+                                <div class="source">
+                                    <button class="source-btn2">code</button>
+                                    <div id="modal2">
+                                        <div class="modal-wrap">
+                                            <div class="modal-cont">
+                                                <div class="code-view">
+                                                    <div class="view-header">
+                                                        <span class="close"></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                    <div class="view-title">
+                                                        <ul>
+                                                            <li class="active"><a href="#">html</a></li>
+                                                            <li class="active"><a href="#">css</a></li>
+                                                            <li class="active"><a href="#">javascript</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="view-cont">
+                                                        <div>
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div id="header"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="header"&gt;
+                &lt;div class="header-menu"&gt;
+                    &lt;a href="https://wiss.tistory.com/"&gt;Desinger&lt;/a&gt;
+                    &lt;a href="https://webstoryboy.co.kr/"&gt;Publisher&lt;/a&gt;
+                    &lt;a href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw"&gt;Youtube&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;!-- //헤더 메뉴 --&gt;
+                &lt;div class="header-tit"&gt;
+                    &lt;h1&gt;Professional Publisher &amp; Designer&lt;/h1&gt;&lt;br&gt;
+                    &lt;a href="https://webstoryboy.co.kr/"&gt;webstoryboy.co.kr&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;!-- //헤더 타이틀 --&gt;
+                &lt;div class="header-icon"&gt;
+                    &lt;a href="#" class="icon1"&gt;&lt;span class="ir_pm"&gt;icon1&lt;/span&gt;&lt;/a&gt;
+                    &lt;a href="#" class="icon2"&gt;&lt;span class="ir_pm"&gt;icon2&lt;/span&gt;&lt;/a&gt;
+                    &lt;a href="#" class="icon3"&gt;&lt;span class="ir_pm"&gt;icon3&lt;/span&gt;&lt;/a&gt;
+                    &lt;a href="#" class="icon4"&gt;&lt;span class="ir_pm"&gt;icon4&lt;/span&gt;&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;!-- //헤더 아이콘 --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- //header --&gt;
+</code></pre>
+                                                        </div>
+
+                                                        <div>
+<pre><code class="language-css">/* 헤더 */
+.header .header-menu {
+    text-align: right;
+}
+
+.header .header-menu a {
+    color: #fff;
+    padding: 10px 0px 10px 13px;
+    display: inline-block;
+}
+
+.header .header-menu a:hover {
+    color: #666;
+}
+
+.header .header-tit {
+    text-align: center;
+}
+
+.header .header-tit h1 {
+    background-color: #4aa8d4;
+    font-size: 28px;
+    padding: 5px 20px 6px 20px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.header .header-tit a {
+    display: inline-block;
+    background-color: #2698cb;
+    font-size: 18px;
+    color: #fff;
+    padding: 5px 20px 6px 20px;
+    margin-top: -5px;
+}
+
+.header .header-icon {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.header .header-icon a {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background: url(../img/icon.png);
+    margin: 0 3px;
+}
+</code></pre>
+                                                        </div>
+                                                        <div>
+<pre><code class="language-javascript">//레이어 팝업
+$('.layer').click(function (e) {
+    e.preventDefault();
+    $('#layer').css('display', 'block');
+    // $("#modal").show();
+    // $("#modal").fadeIn();
+    // $("#modal").slideDown();
+});
+$('#layer .close').click(function (e) {
+    e.preventDefault();
+    $('#layer').css('display', 'none');
+    // $("#modal").hide();
+    // $("#modal").fadeOut();
+    // $("#modal").slideUp();
+});
+
+//탭 메뉴
+var $tab_list = $('.tab_menu');
+
+$tab_list.find('ul ul').hide();
+$tab_list.find('li.active>ul').show();
+
+function tabMenu(e) {
+    e.preventDefault();
+    var $this = $(this);
+    $this.next('ul').show().parent('li').addClass('active').siblings('li').removeClass('active').find('>ul').hide();
+}
+$tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);                      
+</code></pre>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                    <!-- //view-cont -->
+                                                </div>
+                                            </div>
+                                        <button class="modal-close2">닫기</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>   
                     </div>  
                     <!-- //site - responsive -->
 
-                      <div class="site">
-                            <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">megabox</span>
+
+
+
+
+                    <div class="site">
+                            <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">megabox megabox megabox megabox megabox</span>
                             <div class="site_img">
                                 <img src="img/megabox1.svg" class="main_img" alt="메가박스이미지1">
                                 <div class="site_rt_img" data-scroll data-scroll-speed="2">
@@ -143,16 +438,163 @@
                                     <span class="site_subtit">megabox  site</span>
                                     <span class="site_desc">
                                         실제 메가박스 사이트를 반응형으로 작업한 기업형 사이트 입니다. SWIPER 이미지 슬라이드, 탭 메뉴 등 제이쿼리와 스크립트를 이용하여 구현하였으며 미디어쿼리를 이용해 작은 모바일 화면에서도 깨짐없이 모바일화면에 맞는 디자인으로 변형하였습니다.</span>
-                                        <a href="https://github.com/Kim-EunSu/mega"><div class="btn">code</div></a>
+
+                                </div>
+                                <!-- // -->
+                                <div class="source">
+                                    <button class="source-btn3">code</button>
+                                    <div id="modal3">
+                                        <div class="modal-wrap">
+                                            <div class="modal-cont">
+                                                <div class="code-view">
+                                                    <div class="view-header">
+                                                        <span class="close"></span>
+                                                        <span></span>
+                                                        <span></span>
+                                                    </div>
+                                                    <div class="view-title">
+                                                        <ul>
+                                                            <li class="active"><a href="#">html</a></li>
+                                                            <li class="active"><a href="#">css</a></li>
+                                                            <li class="active"><a href="#">javascript</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="view-cont">
+                                                        <div>
+<pre><code class="language-html">&lt;main&gt;
+    &lt;div id="header"&gt;
+        &lt;div class="container"&gt;
+            &lt;div class="header"&gt;
+                &lt;div class="header-menu"&gt;
+                    &lt;a href="https://wiss.tistory.com/"&gt;Desinger&lt;/a&gt;
+                    &lt;a href="https://webstoryboy.co.kr/"&gt;Publisher&lt;/a&gt;
+                    &lt;a href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw"&gt;Youtube&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;!-- //헤더 메뉴 --&gt;
+                &lt;div class="header-tit"&gt;
+                    &lt;h1&gt;Professional Publisher &amp; Designer&lt;/h1&gt;&lt;br&gt;
+                    &lt;a href="https://webstoryboy.co.kr/"&gt;webstoryboy.co.kr&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;!-- //헤더 타이틀 --&gt;
+                &lt;div class="header-icon"&gt;
+                    &lt;a href="#" class="icon1"&gt;&lt;span class="ir_pm"&gt;icon1&lt;/span&gt;&lt;/a&gt;
+                    &lt;a href="#" class="icon2"&gt;&lt;span class="ir_pm"&gt;icon2&lt;/span&gt;&lt;/a&gt;
+                    &lt;a href="#" class="icon3"&gt;&lt;span class="ir_pm"&gt;icon3&lt;/span&gt;&lt;/a&gt;
+                    &lt;a href="#" class="icon4"&gt;&lt;span class="ir_pm"&gt;icon4&lt;/span&gt;&lt;/a&gt;
+                &lt;/div&gt;
+                &lt;!-- //헤더 아이콘 --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- //header --&gt;
+</code></pre>
+                                                        </div>
+
+                                                        <div>
+<pre><code class="language-css">/* 헤더 */
+.header .header-menu {
+    text-align: right;
+}
+
+.header .header-menu a {
+    color: #fff;
+    padding: 10px 0px 10px 13px;
+    display: inline-block;
+}
+
+.header .header-menu a:hover {
+    color: #666;
+}
+
+.header .header-tit {
+    text-align: center;
+}
+
+.header .header-tit h1 {
+    background-color: #4aa8d4;
+    font-size: 28px;
+    padding: 5px 20px 6px 20px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.header .header-tit a {
+    display: inline-block;
+    background-color: #2698cb;
+    font-size: 18px;
+    color: #fff;
+    padding: 5px 20px 6px 20px;
+    margin-top: -5px;
+}
+
+.header .header-icon {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.header .header-icon a {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background: url(../img/icon.png);
+    margin: 0 3px;
+}
+</code></pre>
+                                                        </div>
+                                                        <div>
+<pre><code class="language-javascript">//레이어 팝업
+$('.layer').click(function (e) {
+    e.preventDefault();
+    $('#layer').css('display', 'block');
+    // $("#modal").show();
+    // $("#modal").fadeIn();
+    // $("#modal").slideDown();
+});
+$('#layer .close').click(function (e) {
+    e.preventDefault();
+    $('#layer').css('display', 'none');
+    // $("#modal").hide();
+    // $("#modal").fadeOut();
+    // $("#modal").slideUp();
+});
+
+//탭 메뉴
+var $tab_list = $('.tab_menu');
+
+$tab_list.find('ul ul').hide();
+$tab_list.find('li.active>ul').show();
+
+function tabMenu(e) {
+    e.preventDefault();
+    var $this = $(this);
+    $this.next('ul').show().parent('li').addClass('active').siblings('li').removeClass('active').find('>ul').hide();
+}
+$tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);                      
+</code></pre>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                    <!-- //view-cont -->
+                                                </div>
+                                            </div>
+                                        <button class="modal-close3">닫기</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>   
                     </div>
+
                 </section> 
                 <!-- //section4 -->
 
                   <section id="section5">
                     <div class="site">
-                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2" >script</span>
+                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2" >script script script script script</span>
                         <div class="script_cont">
                             <img src="img/tetris1.svg" class="script_img1" alt="테트리스이미지1">
                             <div class="site_rt_cir" data-scroll data-scroll-speed="1.2" >
@@ -177,7 +619,7 @@
                     <!-- //site - tetris -->
 
                      <div class="site">
-                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">script</span>
+                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">script script script script script</span>
                         <div class="script_cont">
                             <img src="img/musicplayer1.svg" class="script_img1" alt="뮤직플레이어이미지1">
                             <div class="site_rt_cir" data-scroll data-scroll-speed="1.2" >
@@ -203,7 +645,7 @@
                     <!-- //site - musicplayer -->
 
                      <div class="site">
-                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">script</span>
+                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">script script script script script</span>
                         <div class="script_cont">
                             <img src="img/typing1.svg" class="script_img1" alt="타이핑게임이미지1">
                             <div class="site_rt_cir" data-scroll data-scroll-speed="1.2" >
@@ -230,7 +672,7 @@
 
               <section id="section6">
                     <div class="site">
-                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">php site</span>
+                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">php site php site php site</span>
                             <img src="img/php1.svg" class="front_img1" alt="php사이트1">
                             <div class="front_rt_img" data-scroll data-scroll-speed="1">
                                 <img src="img/php2.svg" class="front_img2" alt="php사이트2">
@@ -243,7 +685,7 @@
                                 </a>
                             </div>
                             <div class="front_cont">
-                                <span class="front_tit">php site </span>
+                                <span class="front_tit">php site  </span>
                                 <span class="front_desc">
                                     PHP를 사용해 웹 페이지를 제작하였습니다. 
                                     댓글 기능, 게시판, 로그인, 회원가입 기능을 넣었습니다.
@@ -255,7 +697,7 @@
                     <!-- //site - php -->
 
                       <div class="site">
-                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">react site </span>
+                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">react site react site react site </span>
                             <img src="img/react1.svg" class="front_img1" alt="react사이트1">
                             <div class="front_rt_img" data-scroll data-scroll-speed="1">
                                 <img src="img/react2.svg" class="front_img2" alt="react사이트2">
@@ -277,7 +719,7 @@
                     <!-- //site - react -->
 
                      <div class="site">
-                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">vue site </span>
+                        <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">vue site vue site vue site </span>
                             <img src="img/vue1.jpg" class="front_img1" alt="vue사이트1">
                             <div class="front_rt_img" data-scroll data-scroll-speed="1">
                                 <img src="img/vue2.svg" class="front_img2" alt="vue사이트2">
@@ -351,16 +793,18 @@
             <!-- //section_wrap -->
     
     </main>
-    
 
+
+      <!--===== modal =====-->
+    <script src="js/modal.js"></script>
+
+    <script src="js/highlight.min.js"></script>
 
 
      <!--===== gsap =====-->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 
 
 
@@ -378,16 +822,12 @@
     </script>
     
    <script> 
-         var s = skrollr.init();
-
-
-        window.addEventListener("scroll", () => {
-            let scrollTop = document.documentElement.scrollTop || window.pageYOffset
-
-            document.querySelector(".scroll").innerHTML = scrollTop;
-        })
-
-
+        highlight(); //외부 스크립트 함수 (highlight)호출
+        modal1(); //외부 스크립트 함수 (modal, 소스보기 창)호출
+        modal2(); //외부 스크립트 함수 (modal, 소스보기 창)호출
+        modal3(); //외부 스크립트 함수 (modal, 소스보기 창)호출
+        tabMenu(); //외부 스크립트 함수 (tabMenu, 소스보기의 탭 메뉴)호출
+    
         // ANIMATIONS 삭제하지 말것!!!!!!!!!!!!!!!!!!!!!!!!!!!
         window.addEventListener("scroll",function(){
         let scrollTop = document.documentElement.scrollTop;
@@ -398,7 +838,7 @@
         const tl2 = gsap.timeline({
             scrollTrigger: {
             trigger: "#section3",
-            // start: "center bottom",
+             start: "center bottom",
         },
         });
 
@@ -417,39 +857,8 @@
 
         tl2.from(".animate", { opacity: 0, y: "100%", stagger: .2 });
         tl2.from(".about_bottom", { opacity: 0, y: "100%", stagger: .1 });
- 
-    // 굳이 존재 안해도...x
-    const sec1 = document.querySelector(".sec1 img");
-    const circle = document.querySelector(".circle");
-    const sec1_txt = document.querySelector(".sec1_txt");
-    const animate = document.querySelector(".animate");
-    const about_bottom = document.querySelector('.about_bottom ');
-
-        
 
     </script> 
-
-    <!-- <script>
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.from(".sec1 img", {opacity: 0, x: "-100%", duration:2 });
-        gsap.from(".circle", {opacity: 0, x: "100%", duration:2  }, "-=1" );
-
-        const tl2 = gsap.timeline({
-            scrollTrigger: {
-            trigger: ".section3_cont",
-            start: "center bottom",
-        },
-        });
-
-        gsap.from(".about_bottom", {opacity: 0, y: "100%", duration:2 }, "-=1");
-
-
-    </script> -->
-
-
-
-
-
 
 </body>
 </html>
