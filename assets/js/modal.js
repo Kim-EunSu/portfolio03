@@ -34,6 +34,36 @@ const modal3 = function () {
   });
 };
 
+const modal4 = function () {
+  document.querySelector(".source-btn4").addEventListener("click", () => {
+    document.querySelector("#modal4").classList.add("show");
+    document.querySelector("#modal4").classList.remove("hide");
+  });
+  document.querySelector(".modal-close4").addEventListener("click", () => {
+    document.querySelector("#modal4").classList.add("hide");
+  });
+};
+
+const modal5 = function () {
+  document.querySelector(".source-btn5").addEventListener("click", () => {
+    document.querySelector("#modal5").classList.add("show");
+    document.querySelector("#modal5").classList.remove("hide");
+  });
+  document.querySelector(".modal-close5").addEventListener("click", () => {
+    document.querySelector("#modal5").classList.add("hide");
+  });
+};
+
+const modal6 = function () {
+  document.querySelector(".source-btn6").addEventListener("click", () => {
+    document.querySelector("#modal6").classList.add("show");
+    document.querySelector("#modal6").classList.remove("hide");
+  });
+  document.querySelector(".modal-close6").addEventListener("click", () => {
+    document.querySelector("#modal6").classList.add("hide");
+  });
+};
+
 //tabmenu
 const tabMenu = function () {
   const tabBtn = document.querySelectorAll(".view-title ul li");

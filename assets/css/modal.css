@@ -58,12 +58,45 @@
     background: rgba(0,0,0,0.4);
 }
 
+#modal4 {
+    position: absolute;
+    top: -44vh;
+    left: 0;
+    width: 60vw;
+    height: 75vh;
+    z-index: 1000;
+    transform: scale(0);
+    background: rgba(0,0,0,0.4);
+}
+#modal5 {
+    position: absolute;
+    top: -44vh;
+    left: 0;
+    width: 60vw;
+    height: 75vh;
+    z-index: 1000;
+    transform: scale(0);
+    background: rgba(0,0,0,0.4);
+}
+#modal6 {
+    position: absolute;
+    top: -44vh;
+    left: 0;
+    width: 60vw;
+    height: 75vh;
+    z-index: 1000;
+    transform: scale(0);
+    background: rgba(0,0,0,0.4);
+}
+
+
 #modal1.show {
     display: flex;
     align-items: center;
     justify-content: center;
     animation: foldOut 1s ease forwards;
 }
+
 #modal1.show.hide {
     animation: foldIn 1s 0.3s ease backwards;
 }
@@ -85,6 +118,37 @@
     animation: foldOut 1s ease forwards;
 }
 #modal3.show.hide {
+    animation: foldIn 1s 0.3s ease backwards;
+}
+
+#modal4.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: foldOut 1s ease forwards;
+}
+#modal4.show.hide {
+    animation: foldIn 1s 0.3s ease backwards;
+}
+
+#modal5.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: foldOut 1s ease forwards;
+}
+#modal5.show.hide {
+    animation: foldIn 1s 0.3s ease backwards;
+}
+
+
+#modal6.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: foldOut 1s ease forwards;
+}
+#modal6.show.hide {
     animation: foldIn 1s 0.3s ease backwards;
 }
 
@@ -115,6 +179,27 @@
 #modal3.show.hide .modal-wrap {
     animation: zoomIn 0.5s ease forwards;
 }
+
+#modal4.show .modal-wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal4.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+}
+#modal5.show .modal-wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal5.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+}
+
+#modal6.show .modal-wrap {
+    animation: zoomOut 0.5s 1s ease forwards;
+}
+#modal6.show.hide .modal-wrap {
+    animation: zoomIn 0.5s ease forwards;
+}
+   
 @keyframes foldOut {
     0%   {transform: scaleX(0) scaleY(0.005)}
     50%  {transform: scaleX(1) scaleY(0.005)}
@@ -142,6 +227,19 @@
 .modal-close3 {
     margin-top: 10px;
 }
+
+.modal-close4 {
+    margin-top: 10px;
+}
+
+.modal-close5 {
+    margin-top: 10px;
+}
+
+.modal-close6 {
+    margin-top: 10px;
+}
+
 .modal-cont {
     opacity: 1;
     position: relative;
@@ -172,13 +270,13 @@
     border-radius: 10px;
 }    
 .view-header > span:nth-child(1) {
-    background-color: #f56565;
+    background-color: #f1b5b5;
 }
 .view-header > span:nth-child(2) {
-    background-color: #f6e05e;
+    background-color: #eec1a1;
 }
 .view-header > span:nth-child(3) {
-    background-color: #4EBB7B;
+    background-color: #a1d4a3;
 }
 .view-title {
     position: absolute;

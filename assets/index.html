@@ -288,117 +288,186 @@ $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);
                                                     <div class="view-cont">
                                                         <div>
 <pre><code class="language-html">&lt;main&gt;
-    &lt;div id="header"&gt;
-        &lt;div class="container"&gt;
-            &lt;div class="header"&gt;
-                &lt;div class="header-menu"&gt;
-                    &lt;a href="https://wiss.tistory.com/"&gt;Desinger&lt;/a&gt;
-                    &lt;a href="https://webstoryboy.co.kr/"&gt;Publisher&lt;/a&gt;
-                    &lt;a href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw"&gt;Youtube&lt;/a&gt;
+    &lt;section id="cont_center"&gt;
+        &lt;h3 class="ir_su"&gt;반응형 사이트 가운데 컨텐츠&lt;/h3&gt;
+        &lt;article class="column col4"&gt;
+            &lt;h4 class="col_tit"&gt;Slick Slider&lt;/h4&gt;
+            &lt;p class="col_desc"&gt;slick.js를 이용한 이미지 슬라이드 효과입니다.&lt;/p&gt;
+            &lt;!-- 이미지 슬라이드 --&gt;
+            &lt;div class="slider"&gt;
+                &lt;div&gt;
+                    &lt;figure&gt;
+                        &lt;img src="img/slider001.jpg" alt="이미지1"&gt;
+                        &lt;figcaption&gt;&lt;em&gt;Responsive Site&lt;/em&gt;&lt;span&gt;슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.&lt;/span&gt;&lt;/figcaption&gt;
+                    &lt;/figure&gt;
                 &lt;/div&gt;
-                &lt;!-- //헤더 메뉴 --&gt;
-                &lt;div class="header-tit"&gt;
-                    &lt;h1&gt;Professional Publisher &amp; Designer&lt;/h1&gt;&lt;br&gt;
-                    &lt;a href="https://webstoryboy.co.kr/"&gt;webstoryboy.co.kr&lt;/a&gt;
+                &lt;div&gt;
+                    &lt;figure&gt;
+                        &lt;img src="img/slider001.jpg" alt="이미지2"&gt;
+                        &lt;figcaption&gt;&lt;em&gt;Responsive Site&lt;/em&gt;&lt;span&gt;슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.&lt;/span&gt;&lt;/figcaption&gt;
+                    &lt;/figure&gt;
                 &lt;/div&gt;
-                &lt;!-- //헤더 타이틀 --&gt;
-                &lt;div class="header-icon"&gt;
-                    &lt;a href="#" class="icon1"&gt;&lt;span class="ir_pm"&gt;icon1&lt;/span&gt;&lt;/a&gt;
-                    &lt;a href="#" class="icon2"&gt;&lt;span class="ir_pm"&gt;icon2&lt;/span&gt;&lt;/a&gt;
-                    &lt;a href="#" class="icon3"&gt;&lt;span class="ir_pm"&gt;icon3&lt;/span&gt;&lt;/a&gt;
-                    &lt;a href="#" class="icon4"&gt;&lt;span class="ir_pm"&gt;icon4&lt;/span&gt;&lt;/a&gt;
+                &lt;div&gt;
+                    &lt;figure&gt;
+                        &lt;img src="img/slider001.jpg" alt="이미지3"&gt;
+                        &lt;figcaption&gt;&lt;em&gt;Responsive Site&lt;/em&gt;&lt;span&gt;슬라이드 플러그인을 이용한 반응형 이미지 슬라이드 입니다.&lt;/span&gt;&lt;/figcaption&gt;
+                    &lt;/figure&gt;
                 &lt;/div&gt;
-                &lt;!-- //헤더 아이콘 --&gt;
             &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;!-- //header --&gt;
+            &lt;!--//이미지 슬라이드 --&gt;
+        &lt;/article&gt;
+        &lt;!-- //col4 --&gt; 
+ 
 </code></pre>
                                                         </div>
 
                                                         <div>
-<pre><code class="language-css">/* 헤더 */
-.header .header-menu {
-    text-align: right;
+<pre><code class="language-css">/* mediaquery */
+/* 화면 너비 0~1220px */
+@media (max-width: 1220px) {
+    .container {
+        width: 100%;
+    }
+
+    .row {
+        padding: 0 15px;
+    }
+
+    #cont_center {
+        min-height: 1350px;
+    }
+
+    #contents .container {
+        border: 0;
+    }
+
+    .title .btn {
+        right: 15px;
+    }
+
+    .square a {
+        width: 24%
+    }
+
+    .square a:nth-child(5n) {
+        display: none;
+    }
 }
 
-.header .header-menu a {
-    color: #fff;
-    padding: 10px 0px 10px 13px;
-    display: inline-block;
+/* 화면 너비 0~1024px */
+@media (max-width: 1024px) {
+    .square a {
+        width: 32.33333%
+    }
+
+    .square a:nth-child(5) {
+        display: block;
+    }
 }
 
-.header .header-menu a:hover {
-    color: #666;
-}
+/* 화면 너비 0~960px */
+@media (max-width: 960px) {
+    #cont_right {
+        position: static;
+        width: 100%;
+        border-top: 1px solid #dbdbdb;
+    }
 
-.header .header-tit {
-    text-align: center;
-}
+    #cont_center {
+        margin-right: 0;
+        border-right: 0;
+    }
 
-.header .header-tit h1 {
-    background-color: #4aa8d4;
-    font-size: 28px;
-    padding: 5px 20px 6px 20px;
-    display: inline-block;
-    color: #fff;
-    margin-top: 40px;
-    font-weight: normal;
-    text-transform: uppercase;
-}
+    .nav>div {
+        float: none;
+        width: 100%;
+    }
 
-.header .header-tit a {
-    display: inline-block;
-    background-color: #2698cb;
-    font-size: 18px;
-    color: #fff;
-    padding: 5px 20px 6px 20px;
-    margin-top: -5px;
-}
+    .nav>div:last-child {
+        width: 100%;
+    }
 
-.header .header-icon {
-    text-align: center;
-    margin-top: 30px;
-}
+    .nav>div li {
+        width: 33.333%;
+    }
 
-.header .header-icon a {
-    width: 60px;
-    height: 60px;
-    display: inline-block;
-    background: url(../img/icon.png);
-    margin: 0 3px;
+    .nav>div:last-child li {
+        width: 33.333%;
+    }
+
+    .nav>div ol {
+        margin-bottom: 10px;
+    }
+
+    #cont_right {
+        overflow: hidden;
+    }
+
+    #cont_right .column {
+        float: left;
+        width: 33.333%;
+        box-sizing: border-box;
+    }
+
+    #cont_right .column.col7 {
+        border-right: 1px solid #dbdbdb;
+        border-bottom: 0;
+    }
+
+    #cont_right .column.col8 {
+        border-right: 1px solid #dbdbdb;
+        border-bottom: 0;
+    }
 }
 </code></pre>
                                                         </div>
                                                         <div>
-<pre><code class="language-javascript">//레이어 팝업
-$('.layer').click(function (e) {
+<pre><code class="language-javascript">
+//접기/펼치기
+$(".btn").click(function (e) {
     e.preventDefault();
-    $('#layer').css('display', 'block');
-    // $("#modal").show();
-    // $("#modal").fadeIn();
-    // $("#modal").slideDown();
+    $(".nav").slideToggle();
+    $(".btn").toggleClass("open");
+    //var btn = $(".btn").find(">i").attr("class");
+    //alert(btn);
+
+    if ($(".btn").hasClass("open")) {
+        //open이 있을 때
+        $(".btn").find(">i").attr("class", "fa fa-angle-up");
+    } else {
+        //open이 없을 때
+        $(".btn").find(">i").attr("class", "fa fa-angle-down");
+    }
 });
-$('#layer .close').click(function (e) {
-    e.preventDefault();
-    $('#layer').css('display', 'none');
-    // $("#modal").hide();
-    // $("#modal").fadeOut();
-    // $("#modal").slideUp();
+
+$(window).resize(function () {
+    var wWidth = $(window).width();
+    if (wWidth > 600) {
+        $(".nav").removeAttr("style");
+    }
 });
 
-//탭 메뉴
-var $tab_list = $('.tab_menu');
+//라이트 박스
+$(".lightbox").lightGallery({
+    thumbnail: true,
+    autoplay: true,
+    pause: 3000,
+    progressBar: true
+});
 
-$tab_list.find('ul ul').hide();
-$tab_list.find('li.active>ul').show();
-
-function tabMenu(e) {
-    e.preventDefault();
-    var $this = $(this);
-    $this.next('ul').show().parent('li').addClass('active').siblings('li').removeClass('active').find('>ul').hide();
-}
-$tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);                      
+//이미지 슬라이더
+$(".slider").slick({
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+            autoplay: false,
+        }
+    }]
+});                  
 </code></pre>
                                                         </div>
 
@@ -457,32 +526,45 @@ $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);
                                                     </div>
                                                     <div class="view-cont">
                                                         <div>
-<pre><code class="language-html">&lt;main&gt;
-    &lt;div id="header"&gt;
-        &lt;div class="container"&gt;
-            &lt;div class="header"&gt;
-                &lt;div class="header-menu"&gt;
-                    &lt;a href="https://wiss.tistory.com/"&gt;Desinger&lt;/a&gt;
-                    &lt;a href="https://webstoryboy.co.kr/"&gt;Publisher&lt;/a&gt;
-                    &lt;a href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw"&gt;Youtube&lt;/a&gt;
+<pre><code class="language-html">&lt;banner&gt;
+&lt;section id="banner"&gt;
+    &lt;div class="banner_menu"&gt;
+        &lt;div class="slider"&gt;
+            &lt;div class="swiper-container"&gt;
+            &lt;div class="swiper-wrapper"&gt;
+                &lt;div class="swiper-slide ss1"&gt;
+                &lt;div class="container"&gt;
+                    &lt;div class="row"&gt;
+                    &lt;h3&gt;어벤져스 : 앤드게임&lt;/h3&gt;
+                    &lt;p&gt;역대 최단 기간 1000만 관객 돌파 기록 &lt;/p&gt;
+                    &lt;/div&gt;
                 &lt;/div&gt;
-                &lt;!-- //헤더 메뉴 --&gt;
-                &lt;div class="header-tit"&gt;
-                    &lt;h1&gt;Professional Publisher &amp; Designer&lt;/h1&gt;&lt;br&gt;
-                    &lt;a href="https://webstoryboy.co.kr/"&gt;webstoryboy.co.kr&lt;/a&gt;
                 &lt;/div&gt;
-                &lt;!-- //헤더 타이틀 --&gt;
-                &lt;div class="header-icon"&gt;
-                    &lt;a href="#" class="icon1"&gt;&lt;span class="ir_pm"&gt;icon1&lt;/span&gt;&lt;/a&gt;
-                    &lt;a href="#" class="icon2"&gt;&lt;span class="ir_pm"&gt;icon2&lt;/span&gt;&lt;/a&gt;
-                    &lt;a href="#" class="icon3"&gt;&lt;span class="ir_pm"&gt;icon3&lt;/span&gt;&lt;/a&gt;
-                    &lt;a href="#" class="icon4"&gt;&lt;span class="ir_pm"&gt;icon4&lt;/span&gt;&lt;/a&gt;
+                &lt;div class="swiper-slide ss2"&gt;
+                &lt;div class="container"&gt;
+                    &lt;div class="row"&gt;
+                    &lt;h3&gt;어벤져스 : 앤드게임&lt;/h3&gt;
+                    &lt;p&gt;역대 최단 기간 1000만 관객 돌파 기록 &lt;/p&gt;
+                    &lt;/div&gt;
                 &lt;/div&gt;
-                &lt;!-- //헤더 아이콘 --&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide ss3"&gt;
+                &lt;div class="container"&gt;
+                    &lt;div class="row"&gt;
+                    &lt;h3&gt;어벤져스 : 앤드게임&lt;/h3&gt;
+                    &lt;p&gt;역대 최단 기간 1000만 관객 돌파 기록 &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+            &lt;div class="swiper-button-prev"&gt;&lt;/div&gt;
+            &lt;div class="swiper-button-next"&gt;&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;!-- //header --&gt;
+    &lt;/div&gt;    
+&lt;/section&gt;
+&lt;!-- //banner --&gt;
 </code></pre>
                                                         </div>
 
@@ -541,34 +623,49 @@ $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);
 </code></pre>
                                                         </div>
                                                         <div>
-<pre><code class="language-javascript">//레이어 팝업
-$('.layer').click(function (e) {
-    e.preventDefault();
-    $('#layer').css('display', 'block');
-    // $("#modal").show();
-    // $("#modal").fadeIn();
-    // $("#modal").slideDown();
-});
-$('#layer .close').click(function (e) {
-    e.preventDefault();
-    $('#layer').css('display', 'none');
-    // $("#modal").hide();
-    // $("#modal").fadeOut();
-    // $("#modal").slideUp();
+<pre><code class="language-javascript">//배너 이미지 슬라이드
+var swiper = new Swiper('.swiper-container', {
+    pagination: {
+    el: '.swiper-pagination',
+    },
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+    delay: 5000,
+    },
 });
 
-//탭 메뉴
-var $tab_list = $('.tab_menu');
-
-$tab_list.find('ul ul').hide();
-$tab_list.find('li.active>ul').show();
-
-function tabMenu(e) {
-    e.preventDefault();
-    var $this = $(this);
-    $this.next('ul').show().parent('li').addClass('active').siblings('li').removeClass('active').find('>ul').hide();
-}
-$tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);                      
+//영화차트 이미지 슬라이드
+var swiper = new Swiper('.swiper-container2', {
+    slidesPerView: 4,
+    spaceBetween: 24,
+    //            mousewheel: {
+    //                invert: true,
+    //            },
+    keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+    },
+    autoplay: {
+    delay: 6000,
+    },
+    breakpoints: {
+    600: {
+        slidesPerView: 1.4,
+        spaceBetween: 24
+    },
+    768: {
+        slidesPerView: 2,
+        spaceBetween: 24
+    },
+    960: {
+        slidesPerView: 3,
+        spaceBetween: 24
+    }
+    }
+});                     
 </code></pre>
                                                         </div>
 
@@ -592,62 +689,60 @@ $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);
                     <div class="site">
                         <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2" >script script script script script</span>
                         <div class="script_cont">
-                            <img src="img/tetris1.svg" class="script_img1" alt="테트리스이미지1">
+                            <img src="img/weather1.svg" class="script_img1" alt="날씨이미지1">
                             <div class="site_rt_cir" data-scroll data-scroll-speed="1.2" >
-                                <a href="https://kim-eunsu.github.io/javascript-game-/tetris/">
+                                <a href="https://kim-eunsu.github.io/javascript-game-/weather/">
                                     <div class="site_cir">
-                                    site
+                                    play
                                     </div>
                                 </a>
                             </div>
                             <div class="script_rt_img" >
-                                <img src="img/tetris2.svg" class="script_img2" alt="테트리스이미지2">
+                                <img src="img/weather2.svg" class="script_img2" alt="날씨이미지2">
                             </div>
-                            <span class="script_tit">SCRIPT - TETRIS GAME </span>
+                            <span class="script_tit">SCRIPT - weather </span>
                             <span class="script_desc">
-                                Html과 순수 JS만으로 제작했으며 
+                                날씨정보를 가져올 수 있는 OpenWeatherMap을 통해 
+                                API를 가져오고 원격API를 간편하게 호출할 수 있도록 fetch함수를 사용하였습니다. API응답을 받고 json파일을 가져와서 그 결과를 인수로 전달하여 weatherDetail함수를 호출할 수 있게 만들었으며 weatherDetails함수에는 if/else문을 사용하여 날씨 정보에 필요한 속성값을 불러왔습니다.
+                                <!-- Html과 순수 JS만으로 제작했으며 
                                 HTML과 CSS는 최소한의 코드로만<br>작성하였습니다. 
                                 스크립트는 DOM을 다루는 기본 기능을 사용하였습니다.
                                 변수로 tempmovingitem과 movingitem을 선언하여 블럭의 
-                                타입과 좌표에 대한 정보를<br> 담아두었습니다.</span>
+                                타입과 좌표에 대한 정보를<br> 담아두었습니다.</span> -->
                         </div>
                     </div>  
-                    <!-- //site - tetris -->
+                    <!-- //site - weather -->
 
                      <div class="site">
                         <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">script script script script script</span>
                         <div class="script_cont">
-                            <img src="img/musicplayer1.svg" class="script_img1" alt="뮤직플레이어이미지1">
+                            <img src="img/alarm.svg" class="script_img1" alt="알람이미지1">
                             <div class="site_rt_cir" data-scroll data-scroll-speed="1.2" >
-                                <a href="https://kim-eunsu.github.io/javascript-game-/musicplayer/">
+                                <a href="https://kim-eunsu.github.io/javascript-game-/alarm/">
                                     <div class="site_cir">
-                                    site
+                                    play
                                     </div>
                                 </a>
                             </div>
                             <div class="script_rt_img">
-                                <img src="img/musicplayer2.svg" class="script_img2" alt="뮤직플레이어이미지2">
+                                <img src="img/alarm2.svg" class="script_img2" alt="알람이미지2">
                             </div>
-                            <span class="script_tit">SCRIPT -  musicp layer </span>
+                            <span class="script_tit">SCRIPT -  alarm </span>
                             <span class="script_desc">
-                                HTML CSS와 JavaScript만을 
-                                사용하여 MUSIC PLAYER를 만들었습니다. 
-                                PlayPauseBtn에 삼항연산자를 만들어 플레이와 
-                                정지가 가능하도록 만들었습니다. 또한 addEventListener를
-                                사용하여 지정한 유형의 이벤트를 대상이 수신할 때마다 호출할 
-                                함수를 설정하였습니다.</span>
+                                content의 내용을 For문으로 만들어 각각 조건에 맞는 삼항연산자를 통해 값을 불러올 수 있도록 만들었으며 insertAdjacentHTML()메서드를 이용하여  기존의 값은 건드리지 않고 새롭게 입력하고 싶은 값을 어떤 위치에 놓을지 지정하였습니다.현재시간이 계속 실행될수 있는 setinterval()함수와
+                                알람설정시간이 현재시간과 맞으면 알람이 울릴수 있도록  setAlarm() if문을 작성하였습니다.</span>
                         </div>
                     </div> 
-                    <!-- //site - musicplayer -->
+                    <!-- //site - alarm -->
 
                      <div class="site">
                         <span class="title" data-scroll data-scroll-direction="vertical" data-scroll-speed="2">script script script script script</span>
                         <div class="script_cont">
                             <img src="img/typing1.svg" class="script_img1" alt="타이핑게임이미지1">
                             <div class="site_rt_cir" data-scroll data-scroll-speed="1.2" >
-                                <a href="https://kim-eunsu.github.io/javascript-game-/typing%20game/">
+                                <a href="https://kim-eunsu.github.io/javascript-game-/alarm/">
                                     <div class="site_cir">
-                                    site
+                                    play
                                     </div>
                                 </a>
                             </div>
@@ -674,7 +769,7 @@ $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);
                                 <img src="img/php2.svg" class="front_img2" alt="php사이트2">
                             </div>
                             <div class="front_rt_cir" data-scroll data-scroll-speed="2" >
-                                <a href="#">
+                                <a href="http://kes73641.dothome.co.kr/php5/pages/main.php">
                                     <div class="site_cir">
                                     site
                                     </div>
@@ -686,8 +781,155 @@ $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);
                                     PHP를 사용해 웹 페이지를 제작하였습니다. 
                                     댓글 기능, 게시판, 로그인, 회원가입 기능을 넣었습니다.
                                     MyAdmin에 접속한 후 MySQL을 이용해 데이터베이스에 접속하여 
-                                    데이터들을 수정, 삭제, 복사 등을 할 수 있습니다.</span>
-                                    <a href="#"><div class="btn">code</div></a>
+                                    데이터들을 수정, 삭제, 복사 등을 할 수 있습니다.
+                                </span>
+                            </div>
+                        <div class="source">
+                            <button class="source-btn4">code</button>
+                            <div id="modal4">
+                                <div class="modal-wrap">
+                                    <div class="modal-cont">
+                                        <div class="code-view">
+                                            <div class="view-header">
+                                                <span class="close"></span>
+                                                <span></span>
+                                                <span></span>
+                                            </div>
+                                            <div class="view-title">
+                                                <ul>
+                                                    <li class="active"><a href="#">html</a></li>
+                                                    <li class="active"><a href="#">css</a></li>
+                                                    <li class="active"><a href="#">php</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="view-cont">
+                                                <div>
+<pre><code class="language-html">&lt;main id="contents"&gt;
+        &lt;h2 class="ir_so"&gt;컨텐츠 영역&lt;/h2&gt;
+        &lt;section id="board-type" class="section center mb100"&gt;
+            &lt;div class="container"&gt;
+                &lt;h3 class="section__title"&gt;COFFEE 게시판&lt;/h3&gt;
+                &lt;p class="section__desc"&gt;세계 커피원두와 관련된 게시판입니다. 궁금한 점은 여기를 확인하세요!&lt;/p&gt;
+                &lt;div class="board__inner"&gt;
+                    &lt;div class="board__search"&gt;
+                        &lt;form action="boardSearch.php" name="boardSearch" method="GET"&gt;
+                            &lt;fieldset&gt;
+                                &lt;legend class="ir_so"&gt;게시판 검색 영역&lt;/legend&gt;
+                                &lt;div&gt;
+                                    &lt;input type="search" name="searchKeyword" class="search-form" placeholder="검색어를 입력하세요!" aria-label="search" required&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;
+                                    &lt;select name="searchOption" class="search-option"&gt;
+                                        &lt;option value="title"&gt;제목&lt;/option&gt;
+                                        &lt;option value="content"&gt;내용&lt;/option&gt;
+                                        &lt;option value="name"&gt;등록자&lt;/option&gt;
+                                    &lt;/select&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;
+                                    &lt;button type="submit" class="search-btn"&gt;검색&lt;/button&gt;
+                                &lt;/div&gt;
+                                &lt;div&gt;
+                                    &lt;a href="boardWrite.php" class="search-btn black"&gt;글쓰기&lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/fieldset&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                        .
+                        .
+                        .
+</code></pre>
+                                                </div>
+                                                <div>
+<pre><code class="language-css">/* board */
+.board__search fieldset {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+} 
+.board__search .search-form {
+    border: 1px solid #C6C6C6;
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+.board__search .search-option {
+    border: 1px solid #C6C6C6;
+    padding: 6px 20px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+.board__search .search-btn {
+    border: 1px solid #C6C6C6;
+    padding: 7px 20px;
+    border-radius: 5px;
+    margin-left: 5px;
+    background-color: #fff;
+}
+.board__search .search-btn.black {
+    background-color: #000;
+    color: #fff;
+    font-size: 14px;
+    border-color: #000;
+    vertical-align: -5px;
+    padding: 6px 20px;
+}
+.board__search .result {
+    text-align: left;
+    padding-bottom: 10px;
+}
+</code></pre>
+                                                </div>
+                                                <div>
+<pre><code class="language-javascript">&lt;?php
+    //페이지 get 변수가 있다면 받아오고, 없다면 1페이지를 보여준다.
+    if(isset($_GET['page'])){
+        $page = (int) $_GET['page'];
+    }else{
+        $page = 1;
+    }
+
+    $pageView = 10;
+    $pageLimit = ($pageView * $page) - $pageView;
+
+    //LIMIT 0, 10   -&gt; page1
+    //LIMIT 10, 10  -&gt; page2
+    //LIMIT 20, 10  -&gt; page3
+    //LIMIT 30, 10  -&gt; page4
+    
+    // b -&gt; web2Board에 데이터들이 들어가있음,  m -&gt; web2Member에 데이터들이 들어가있음
+    $sql = "SELECT b.boardID, b.boardTitle, m.youName, b.regTime, b.boardView FROM web2Board b JOIN web2Member m ON(b.memberID = m.memberID) ORDER BY boardID DESC LIMIT {$pageLimit}, {$pageView}";
+    $result = $connect -&gt; query($sql);
+
+    if($result){
+
+        $count = $result -&gt; num_rows;
+
+        //한 화면에 나오는 행의 갯수
+        //echo  $count;
+
+        if($count &gt; 0){
+            for($i=0; $i&lt;$count; $i++){
+                $boardInfo = $result -&gt; fetch_array(MYSQLI_ASSOC);
+                echo "&lt;tr&gt;";
+                echo "&lt;td&gt;".$boardInfo['boardID']."&lt;/td&gt;";
+                echo "&lt;td&gt;&lt;a href='boardView.php?boardID={$boardInfo['boardID']}'&gt;".$boardInfo['boardTitle']."&lt;/a&gt;&lt;/td&gt;";
+                echo "&lt;td&gt;".$boardInfo['youName']."&lt;/td&gt;";
+                echo "&lt;td&gt;".date('Y-m-d', $boardInfo['regTime'])."&lt;/td&gt;";
+                echo "&lt;td&gt;".$boardInfo['boardView']."&lt;/td&gt;";
+                echo "&lt;/tr&gt;";
+            }
+        }
+    }
+?&gt;                  
+</code></pre>
+                                                </div>
+                                            </div>
+                                            <!-- //view-cont -->
+                                        </div>
+                                    </div>
+                                <button class="modal-close4">닫기</button>
+                                </div>
+                            </div>
                         </div>
                     </div>   
                     <!-- //site - php -->
@@ -708,9 +950,149 @@ $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);
                             <div class="front_cont">
                                 <span class="front_tit">react site </span>
                                 <span class="front_desc">
-                                    리액트는 가상 돔(Virtual DOM)이라는 개념을사용하여 웹 애플리케이션의 퍼포먼스를 최적화한 라이브러리입니다. Node.js를 통해 CMD에서 터미널을 설정하고 NPM으로 JS라이브러리를 설치한 후, 컴퍼넌트를 생성하여 싱글페이지를 출력시켜만든 React를 사이트입니다.API를 이용한 유튜브 페이지에서 동영상 목록과 검색이 가능하며 영화페이지에선 영화 목록과 검색이 가능합니다.</span>
-                                    <a href="#"><div class="btn">code</div></a>
-                        </div>
+                                    가상 돔(Virtual DOM)이라는 개념을사용하며 컴퍼넌트를 생성하여 싱글페이지를 출력시켜만든 React 사이트입니다.API를 이용한 유튜브 페이지에서 동영상 목록과 검색이 가능하며 영화페이지에선 영화 목록과 검색이 가능합니다.</span>
+                            </div>
+                            <div class="source">
+                                <button class="source-btn5">code</button>
+                                <div id="modal5">
+                                    <div class="modal-wrap">
+                                        <div class="modal-cont">
+                                            <div class="code-view">
+                                                <div class="view-header">
+                                                    <span class="close"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="view-title">
+                                                    <ul>
+                                                        <li class="active"><a href="#">html</a></li>
+                                                        <li class="active"><a href="#">css</a></li>
+                                                        <li class="active"><a href="#">javascript</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="view-cont">
+                                                    <div>
+    <pre><code class="language-html">&lt;main&gt;
+    &lt;div id="header"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="header"&gt;
+            &lt;div class="header-menu"&gt;
+                &lt;a href="https://wiss.tistory.com/"&gt;Desinger&lt;/a&gt;
+                &lt;a href="https://webstoryboy.co.kr/"&gt;Publisher&lt;/a&gt;
+                &lt;a href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw"&gt;Youtube&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!-- //헤더 메뉴 --&gt;
+            &lt;div class="header-tit"&gt;
+                &lt;h1&gt;Professional Publisher &amp; Designer&lt;/h1&gt;&lt;br&gt;
+                &lt;a href="https://webstoryboy.co.kr/"&gt;webstoryboy.co.kr&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!-- //헤더 타이틀 --&gt;
+            &lt;div class="header-icon"&gt;
+                &lt;a href="#" class="icon1"&gt;&lt;span class="ir_pm"&gt;icon1&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="icon2"&gt;&lt;span class="ir_pm"&gt;icon2&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="icon3"&gt;&lt;span class="ir_pm"&gt;icon3&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="icon4"&gt;&lt;span class="ir_pm"&gt;icon4&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!-- //헤더 아이콘 --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- //header --&gt;
+    </code></pre>
+                                                    </div>
+                                                    <div>
+    <pre><code class="language-css">/* 헤더 */
+    .header .header-menu {
+    text-align: right;
+    }
+    
+    .header .header-menu a {
+    color: #fff;
+    padding: 10px 0px 10px 13px;
+    display: inline-block;
+    }
+    
+    .header .header-menu a:hover {
+    color: #666;
+    }
+    
+    .header .header-tit {
+    text-align: center;
+    }
+    
+    .header .header-tit h1 {
+    background-color: #4aa8d4;
+    font-size: 28px;
+    padding: 5px 20px 6px 20px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    }
+    
+    .header .header-tit a {
+    display: inline-block;
+    background-color: #2698cb;
+    font-size: 18px;
+    color: #fff;
+    padding: 5px 20px 6px 20px;
+    margin-top: -5px;
+    }
+    
+    .header .header-icon {
+    text-align: center;
+    margin-top: 30px;
+    }
+    
+    .header .header-icon a {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background: url(../img/icon.png);
+    margin: 0 3px;
+    }
+    </code></pre>
+                                                    </div>
+                                                    <div>
+    <pre><code class="language-javascript">//레이어 팝업
+    $('.layer').click(function (e) {
+    e.preventDefault();
+    $('#layer').css('display', 'block');
+    // $("#modal").show();
+    // $("#modal").fadeIn();
+    // $("#modal").slideDown();
+    });
+    $('#layer .close').click(function (e) {
+    e.preventDefault();
+    $('#layer').css('display', 'none');
+    // $("#modal").hide();
+    // $("#modal").fadeOut();
+    // $("#modal").slideUp();
+    });
+    
+    //탭 메뉴
+    var $tab_list = $('.tab_menu');
+    
+    $tab_list.find('ul ul').hide();
+    $tab_list.find('li.active>ul').show();
+    
+    function tabMenu(e) {
+    e.preventDefault();
+    var $this = $(this);
+    $this.next('ul').show().parent('li').addClass('active').siblings('li').removeClass('active').find('>ul').hide();
+    }
+    $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);                      
+    </code></pre>
+                                                    </div>
+                                                </div>
+                                                <!-- //view-cont -->
+                                            </div>
+                                        </div>
+                                    <button class="modal-close5">닫기</button>
+                                    </div>
+                                </div>
+                            </div>
                     </div>  
                     <!-- //site - react -->
 
@@ -730,10 +1112,150 @@ $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);
                             <div class="front_cont">
                                 <span class="front_tit">vue site </span>
                                 <span class="front_desc">
-                                    자바스크립트 프레임워크 중 하나인 REACT.JS로 개발한
-                                    포트폴리오 사이트입니다. ROUTER를 이용한 LINK 기능과, 컴포넌트를 사용하여 싱글페이지를 출력 시켜만든 VUE SITE입니다. YOUTUBE와 MOVIE. API를 이용한 유투브 동영상 검색 페이지 및 영화 리스트 검색 사이트를 만나 보실수 있습니다.</span>
-                                    <a href="#"><div class="btn">code</div></a>
-                        </div>
+                                    REACT.JS로 개발한 포트폴리오 사이트로 ROUTER를 이용한 LINK 기능과, 컴포넌트를 사용하여 싱글페이지를 출력 시켜만든 VUE SITE입니다. YOUTUBE와 MOVIE. API를 이용한 유튜브 동영상 검색 페이지 및 영화 리스트 검색 사이트를 만나 보실수 있습니다.
+                                </span>
+                            </div>
+                            <div class="source">
+                                <button class="source-btn6">code</button>
+                                <div id="modal6">
+                                    <div class="modal-wrap">
+                                        <div class="modal-cont">
+                                            <div class="code-view">
+                                                <div class="view-header">
+                                                    <span class="close"></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </div>
+                                                <div class="view-title">
+                                                    <ul>
+                                                        <li class="active"><a href="#">html</a></li>
+                                                        <li class="active"><a href="#">css</a></li>
+                                                        <li class="active"><a href="#">javascript</a></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="view-cont">
+                                                    <div>
+    <pre><code class="language-html">&lt;main&gt;
+    &lt;div id="header"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="header"&gt;
+            &lt;div class="header-menu"&gt;
+                &lt;a href="https://wiss.tistory.com/"&gt;Desinger&lt;/a&gt;
+                &lt;a href="https://webstoryboy.co.kr/"&gt;Publisher&lt;/a&gt;
+                &lt;a href="https://www.youtube.com/channel/UCsvQSv7EeCMHyYb9ENKAJZw"&gt;Youtube&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!-- //헤더 메뉴 --&gt;
+            &lt;div class="header-tit"&gt;
+                &lt;h1&gt;Professional Publisher &amp; Designer&lt;/h1&gt;&lt;br&gt;
+                &lt;a href="https://webstoryboy.co.kr/"&gt;webstoryboy.co.kr&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!-- //헤더 타이틀 --&gt;
+            &lt;div class="header-icon"&gt;
+                &lt;a href="#" class="icon1"&gt;&lt;span class="ir_pm"&gt;icon1&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="icon2"&gt;&lt;span class="ir_pm"&gt;icon2&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="icon3"&gt;&lt;span class="ir_pm"&gt;icon3&lt;/span&gt;&lt;/a&gt;
+                &lt;a href="#" class="icon4"&gt;&lt;span class="ir_pm"&gt;icon4&lt;/span&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;!-- //헤더 아이콘 --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;!-- //header --&gt;
+    </code></pre>
+                                                    </div>
+                                                    <div>
+    <pre><code class="language-css">/* 헤더 */
+    .header .header-menu {
+    text-align: right;
+    }
+    
+    .header .header-menu a {
+    color: #fff;
+    padding: 10px 0px 10px 13px;
+    display: inline-block;
+    }
+    
+    .header .header-menu a:hover {
+    color: #666;
+    }
+    
+    .header .header-tit {
+    text-align: center;
+    }
+    
+    .header .header-tit h1 {
+    background-color: #4aa8d4;
+    font-size: 28px;
+    padding: 5px 20px 6px 20px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+    }
+    
+    .header .header-tit a {
+    display: inline-block;
+    background-color: #2698cb;
+    font-size: 18px;
+    color: #fff;
+    padding: 5px 20px 6px 20px;
+    margin-top: -5px;
+    }
+    
+    .header .header-icon {
+    text-align: center;
+    margin-top: 30px;
+    }
+    
+    .header .header-icon a {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    background: url(../img/icon.png);
+    margin: 0 3px;
+    }
+    </code></pre>
+                                                    </div>
+                                                    <div>
+    <pre><code class="language-javascript">//레이어 팝업
+    $('.layer').click(function (e) {
+    e.preventDefault();
+    $('#layer').css('display', 'block');
+    // $("#modal").show();
+    // $("#modal").fadeIn();
+    // $("#modal").slideDown();
+    });
+    $('#layer .close').click(function (e) {
+    e.preventDefault();
+    $('#layer').css('display', 'none');
+    // $("#modal").hide();
+    // $("#modal").fadeOut();
+    // $("#modal").slideUp();
+    });
+    
+    //탭 메뉴
+    var $tab_list = $('.tab_menu');
+    
+    $tab_list.find('ul ul').hide();
+    $tab_list.find('li.active>ul').show();
+    
+    function tabMenu(e) {
+    e.preventDefault();
+    var $this = $(this);
+    $this.next('ul').show().parent('li').addClass('active').siblings('li').removeClass('active').find('>ul').hide();
+    }
+    $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);                      
+    </code></pre>
+                                                    </div>
+                                                </div>
+                                                <!-- //view-cont -->
+                                            </div>
+                                        </div>
+                                    <button class="modal-close6">닫기</button>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                 </section>  
                 <!-- //section6 -->
@@ -793,7 +1315,6 @@ $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);
 
       <!--===== modal =====-->
     <script src="js/modal.js"></script>
-
     <script src="js/highlight.min.js"></script>
 
 
@@ -822,6 +1343,9 @@ $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);
         modal1(); //외부 스크립트 함수 (modal, 소스보기 창)호출
         modal2(); //외부 스크립트 함수 (modal, 소스보기 창)호출
         modal3(); //외부 스크립트 함수 (modal, 소스보기 창)호출
+        modal4(); //외부 스크립트 함수 (modal, 소스보기 창)호출
+        modal5(); //외부 스크립트 함수 (modal, 소스보기 창)호출
+        modal6(); //외부 스크립트 함수 (modal, 소스보기 창)호출
         tabMenu(); //외부 스크립트 함수 (tabMenu, 소스보기의 탭 메뉴)호출
     
         // ANIMATIONS 삭제하지 말것!!!!!!!!!!!!!!!!!!!!!!!!!!!

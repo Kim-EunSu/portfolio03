@@ -163,7 +163,7 @@
     margin-left: 20vh;
     position: relative;
     display: flex;
-    width: 250vh;
+    width: 280vh;
     height: 100vh;
 }
 
@@ -312,7 +312,6 @@
 }
 
 #section5 .site_rt_cir .site_cir{
-   
     width: 26vh;
     height: 26vh;
     color: #000;
@@ -323,6 +322,13 @@
     text-align: center;
     text-transform: uppercase;
     font-family: 'Jura', sans-serif;
+    transition: all .3s ease-in;
+}
+
+
+#section5 .site_rt_cir .site_cir:hover {
+    color: #fff;
+    background: #999;
 }
 
 .script_img1{
@@ -374,10 +380,9 @@
 #section6{
     display: flex;
     position: relative;
-    width: 750vh;
+    width: 830vh;
     height: 100vh;
     background: #CECECE;
-    /* background: #999; */
 }
 
 #section6 .site:first-child{
@@ -421,19 +426,21 @@
     text-align: center;
     background: #1e1e1e;
     text-transform: uppercase;
+    transition: all .3s ease-in;
     font-family: 'Jura', sans-serif;
 }
 
-
-
+#section6 .front_rt_cir .site_cir:hover{
+    color: #000;
+    background: #fff;
+}
 
 
 .front_cont{
     position: absolute;
-    /* display: inline-block; */
     left: 140vh;
     top: 45vh;
-    /* background: red; */
+
 }
 
 .front_tit{
@@ -449,13 +456,28 @@
 
 .front_desc{
     display: inline-block;
-    width: 70vh;
+    width: 72vh;
     color: #000;
     font-size: 2vh;
     word-break: keep-all;
     margin: 1vh 0 1.5vh 0;
     font-family: 'IropkeBatang';
 }
+
+#section6 .source {
+    position: absolute;
+    top: 64vh;
+    left: 140vh;
+}
+
+
+
+
+#section6 .source button:hover {
+    background: #fff;
+}
+
+
 
 #section7{
     width: 160vh; 
@@ -465,10 +487,6 @@
 }
 
 #section7 .logo_title{
-    /* margin-left: 20vh;
-    margin-top: 2vh;
-    font-size: 31.5vh;
-    line-height: .8; */
     color: #fff;
     white-space: nowrap;
 }
