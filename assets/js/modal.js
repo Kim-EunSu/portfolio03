@@ -78,6 +78,7 @@ const modal = function () {
 //   document.querySelector(".modal-close6").addEventListener("click", () => {
 //     document.querySelector("#modal6").classList.add("hide");
 //   });
+// };
 
 //tabmenu
 const tabMenu = function () {
@@ -90,12 +91,12 @@ const tabMenu = function () {
       tabBtn.forEach((btn) => {
         btn.classList.remove("active");
       }); //모든 클래스 active 삭제
-      btn.classList.add("active"); //클릭한 tabBtn에만 클래스 active 푸가
+      btn.classList.add("active"); //클릭한 tabBtn에만 클래스 active 추가
 
-      //모든 컨텐츠 박스 안보이게
-      // tabCont.forEach((cont) => {
-      //   cont.style.display = "none";
-      // });
+      //모든 컨텐츠 박스 안보이게(이게 있어야 탭을 눌렀을 때 내용들이 바뀌어짐)
+      tabCont.forEach((cont) => {
+        cont.style.display = "none";
+      });
 
       //내가 클릭한 콘텐츠 박스를 보이게
       tabCont.forEach((cont, conti) => {
@@ -103,6 +104,8 @@ const tabMenu = function () {
           cont.style.display = "block";
         }
       });
+      // 이게 있으면 그 모달을 눌렀을때 다른 모달에서는 내용이 없어짐
+      // 없으면 모달의 내용이 다 보임
       // tabCont[btni].style.display = "block";
     });
   });
