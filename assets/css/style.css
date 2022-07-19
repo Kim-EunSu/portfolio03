@@ -1,11 +1,12 @@
 /* 로딩페이지 */
-/* .loader{
+.loader{
     display: block;
     position: fixed;
     top: 0; left: 0;
     width: 100%;
-    height: 100vh;
-    background: #1e1e1e;
+    height: 100%;
+    /* background: linear-gradient(#813b97, #463c96); */
+    background: #fff;
     z-index: 10001;
     opacity: 1;
     transition: 0.5s ease;
@@ -95,14 +96,13 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'BeanPole';
     text-align: center;
 }
 
 .loader h1 {
-    color: #fff;
+    color: #9ABEC4;
     font-size: 3vw;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-family: 'Jura', sans-serif;
     
 }
@@ -111,9 +111,8 @@
     z-index: 10000;
     width: 300px;
     height: 3px;
-    background: #fff;
+    background: #9ABEC4;
 }
-
 .loader .line::before {
     content: "";
     display: block;
@@ -123,9 +122,8 @@
           transform-origin: 0 0;
     width: 300px;
     height: 100%;
-    background: linear-gradient(to right, rgba(52  , 100, 115, 1) 60%, rgba(255, 255, 255, 0.4) 80%, #346473);
-} */
-
+    background: linear-gradient(to right, #6b8c94 10%, rgba(255, 255, 255, 0.4) 80%, #CED1D1);
+}
 
 .section_wrap{
     display: flex;
