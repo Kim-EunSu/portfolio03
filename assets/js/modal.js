@@ -85,6 +85,7 @@ const tabMenu = function () {
   const tabBtn = document.querySelectorAll(".view-title ul li");
   const tabCont = document.querySelectorAll(".view-cont > div");
 
+  //btn은 요소, btni는 index
   tabBtn.forEach((btn, btni) => {
     btn.addEventListener("click", () => {
       //내가 클릭한건 active추가

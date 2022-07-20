@@ -370,8 +370,14 @@
     text-align: center;
     font-size: 3.5vh;
     line-height: 18vh;
+    transition: all 0.2s;
     text-transform: uppercase;
     font-family: 'Jura', sans-serif;
+}
+
+.site_rt_cir .site_cir:hover{
+    color: #000;
+    background: #ccc;
 }
 
 .site_cont{
