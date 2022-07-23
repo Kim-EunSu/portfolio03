@@ -6,7 +6,7 @@
     <meta name="EunSu" content="2022portfolio">
   
     <meta name="keywords" content="포트폴리오, 프론트엔드, 웹퍼블리셔, 패럴럭스, 포폴, 포폴만들기">
-    <title>EunSu 포폴 수정본(최종)</title>
+    <title>EunSu 포폴 최종본</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/reset.css">
@@ -21,6 +21,12 @@
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
 
 <body>
+    <!-- 로딩 -->
+    <div class="loading">
+        <div class="loading__ani">loading</div>
+        <span class="loading__text">0%</span>
+    </div>
+
     <main data-scroll-container>
         <div id="wrap1" class="section_wrap">
                 <section id="section1">
@@ -36,10 +42,12 @@
             <!-- //section1 -->
 
             <section id="section2">
+                 <div class="section2_logo">
                     <div class="logo_title" data-scroll data-scroll-speed="1">
                     <div class="logo_tit1" data-scroll data-scroll-speed="1">i am</div>
                     <div class="logo_tit2" data-scroll data-scroll-speed="4">frontend</div>
                     <div class="logo_tit3" data-scroll data-scroll-speed="2">developer</div>
+                </div>
                 </div>
             </section>  
             <!-- //section2 -->
@@ -702,11 +710,7 @@ breakpoints: {
                         <span class="script_desc">
                             날씨정보를 가져올 수 있는 OpenWeatherMap을 통해 
                             API를 가져오고 원격API를 간편하게 호출할 수 있도록 fetch함수를 사용하였습니다. API응답을 받고 json파일을 가져와서 그 결과를 인수로 전달하여 weatherDetail함수를 호출할 수 있게 만들었으며 weatherDetails함수에는 if/else문을 사용하여 날씨 정보에 필요한 속성값을 불러왔습니다.
-                            <!-- Html과 순수 JS만으로 제작했으며 
-                            HTML과 CSS는 최소한의 코드로만<br>작성하였습니다. 
-                            스크립트는 DOM을 다루는 기본 기능을 사용하였습니다.
-                            변수로 tempmovingitem과 movingitem을 선언하여 블럭의 
-                            타입과 좌표에 대한 정보를<br> 담아두었습니다.</span> -->
+
                     </div>
                 </div>  
                 <!-- //site - weather -->
@@ -1315,12 +1319,55 @@ $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);
      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
  
 
-    <!--===== imagesLoaded는 문서 안에 또는 특정 요소 안에 있는 이미지가 모두 로딩되었는지 감지하는 자바스크립트 라이브러리입니다. 이미지가 로딩되기 전에, 로딩 중에 있을 대, 로딩된 후에 어떤 작업을 하고 싶을 때 유용 =====-->
+    <!--===== imagesLoaded는 문서 안에 또는 특정 요소 안에 있는 이미지가 모두 로딩되었는지 감지하는 자바스크립트 라이브러리
+                이미지가 로딩되기 전에, 로딩 중에 있을 대, 로딩된 후에 어떤 작업을 하고 싶을 때 유용 =====-->
      <script src="https://webstoryboy.github.io/NewPortfolio1/port02/assets/js/imagesloaded.pkgd.min.js"></script>
      
 
     <script>
         // 로딩화면
+        function loading(){
+
+let imgLoad = imagesLoaded("body"),
+    imgTotal = imgLoad.images.length,
+    imgLoaded = 0,
+    imgCurrent = 0,
+    progressTimer = setInterval(updateProgress, 1000/60);
+
+imgLoad.on('progress', function(){
+    imgLoaded++;
+});
+
+function updateProgress(){
+    let target = (imgLoaded/imgTotal) * 100;
+    imgCurrent += (target - imgCurrent) * 0.1;
+    $(".loading__text").text(Math.floor(imgCurrent) + "%");
+
+    gsap.set(".sec1 img ", {opacity: 0})
+    gsap.set(".circle", {left: -300})
+    gsap.set(".sec1_txt", {y: 30, opacity: 0})
+    gsap.set(".section2_logo", {x: 100, opacity: 0})
+
+    if(imgCurrent >= 100){
+        clearInterval(progressTimer);
+        setTimeout(() => {
+            const tl = gsap.timeline();
+            tl.to(".loading__ani", {duration: 0.4, opacity: 0}, "1")
+            tl.to(".loading__text", {duration: 0.4, opacity: 0}, "1")
+            tl.to(".loading", {duration: 0.4, width: 0})
+            tl.to(".sec1 img ", {duration: 0.4, opacity: 1})
+            tl.to(".circle", {duration: 0.4, left:270, rotation: 360, ease: "power2.out"})
+            tl.to(".sec1_txt", {duration: 0.8, y:0, opacity: 1, ease: "power1.out"})
+            tl.to(".section2_logo", {duration: 0.8, x:0, opacity: 1, ease: "power1.out"})
+        },1000)
+    }
+    if(imgCurrent > 99){
+        imgCurrent = 100;
+    }
+}
+}
+loading();
+
         
     </script>
 
