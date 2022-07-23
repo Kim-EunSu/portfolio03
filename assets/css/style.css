@@ -1,3 +1,4 @@
+
 /* 로딩페이지 */
 .loader{
     display: block;
@@ -7,7 +8,7 @@
     height: 100%;
     /* background: linear-gradient(#813b97, #463c96); */
     background: #fff;
-    z-index: 10001;
+    z-index: 30000;
     opacity: 1;
     transition: 0.5s ease;
 }
@@ -128,12 +129,6 @@
 .section_wrap{
     display: flex;
 }
-
-#wrap2{
-    display: block;
-}
-
-
 
 
 /* 테두리 */
