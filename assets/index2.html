@@ -336,5 +336,32 @@
 
 
 
+
+<script> 
+
+    //운영체제 정보 알아내기
+    // 에이전트를 사용해서 접속한 브라우저 확인 
+    function mobile(){
+        let os = navigator.userAgent.toLowerCase();
+        console.log(os)
+    
+        if(os.indexOf("iphone") >= 0) {
+            window.location.href="http://kes7364.com/portfolio03/assets/index2.html"
+        } else if (os.indexOf("android") >= 0) {
+            window.location.href="http://kes7364.com/portfolio03/assets/index2.html"
+        } 
+
+        window.onresize = function(event){
+            var innerWidth = window.innerWidth;
+            console.log(innerWidth)
+            innerWidth <= "780"? window.location.href = "http://kes7364.com/portfolio03/assets/index2.html" : window.location.href = "http://kes7364.com/portfolio03/assets/index.html"
+        }
+    }
+
+    mobile();
+
+</script>
+
+
 </body>
 </html>
