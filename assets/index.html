@@ -1321,52 +1321,66 @@ $tab_list.find('>ul>li>a').click(tabMenu).focus(tabMenu);
 
     <!--===== imagesLoaded는 문서 안에 또는 특정 요소 안에 있는 이미지가 모두 로딩되었는지 감지하는 자바스크립트 라이브러리
                 이미지가 로딩되기 전에, 로딩 중에 있을 대, 로딩된 후에 어떤 작업을 하고 싶을 때 유용 =====-->
-     <script src="https://webstoryboy.github.io/NewPortfolio1/port02/assets/js/imagesloaded.pkgd.min.js"></script>
+
+    <script src="https://unpkg.com/imagesloaded@latest/imagesloaded.pkgd.min.js"></script>
      
 
     <script>
         // 로딩화면
         function loading(){
 
-let imgLoad = imagesLoaded("body"),
-    imgTotal = imgLoad.images.length,
-    imgLoaded = 0,
-    imgCurrent = 0,
-    progressTimer = setInterval(updateProgress, 1000/60);
+        //imagesLoaded라이브러리에서 body요소의 이미지 로딩을 모니터링
+        //imgTotal, 동시에 body전체 이미지 수를 저장
+        //imgLoaded, 읽을 완료 한 이미지의 숫자 카운터
+        //imgCurrent, 진행률 표시의 현재 위치에 해당하는 수치
+        //progressTimer, 1초에 60번씩 읽어 여부 확인
+        let imgLoad = imagesLoaded("body"),
+            imgTotal = imgLoad.images.length,
+            imgLoaded = 0,
+            imgCurrent = 0,
+            progressTimer = setInterval(updateProgress, 1000/60);
 
-imgLoad.on('progress', function(){
-    imgLoaded++;
-});
+        //imgagesLoaded을 이용하여 이미지를 로드 할 때 마다 카운트를 계산
+        imgLoad.on('progress', function(){
+            imgLoaded++;
+        });
 
-function updateProgress(){
-    let target = (imgLoaded/imgTotal) * 100;
-    imgCurrent += (target - imgCurrent) * 0.1;
-    $(".loading__text").text(Math.floor(imgCurrent) + "%");
+        //이미지로드 상황을, 바탕으로 진행표시를 업데이트
+        //target, 읽을 완료 한 이미지의 비율
+        //imgCurrent(현재 위치)와 target(목적지)의 거리를 바탕으로 여유를 건다
+        // 텍스트는 소수점 이하를 버리고 정수로
+        function updateProgress(){
+        let target = (imgLoaded/imgTotal) * 100;
+        imgCurrent += (target - imgCurrent) * 0.1;
+        $(".loading__text").text(Math.floor(imgCurrent) + "%");
 
-    gsap.set(".sec1 img ", {opacity: 0})
-    gsap.set(".circle", {left: -300})
-    gsap.set(".sec1_txt", {y: 30, opacity: 0})
-    gsap.set(".section2_logo", {x: 100, opacity: 0})
+        gsap.set(".sec1 img ", {opacity: 0})
+        gsap.set(".circle", {left: -300})
+        gsap.set(".sec1_txt", {y: 30, opacity: 0})
+        gsap.set(".section2_logo", {x: 100, opacity: 0})
 
-    if(imgCurrent >= 100){
-        clearInterval(progressTimer);
-        setTimeout(() => {
-            const tl = gsap.timeline();
-            tl.to(".loading__ani", {duration: 0.4, opacity: 0}, "1")
-            tl.to(".loading__text", {duration: 0.4, opacity: 0}, "1")
-            tl.to(".loading", {duration: 0.4, width: 0})
-            tl.to(".sec1 img ", {duration: 0.4, opacity: 1})
-            tl.to(".circle", {duration: 0.4, left:270, rotation: 360, ease: "power2.out"})
-            tl.to(".sec1_txt", {duration: 0.8, y:0, opacity: 1, ease: "power1.out"})
-            tl.to(".section2_logo", {duration: 0.8, x:0, opacity: 1, ease: "power1.out"})
-        },1000)
+        //종료
+        if(imgCurrent >= 100){
+            //진행표시의 업데이트를 중지
+            clearInterval(progressTimer);
+            setTimeout(() => {
+                const tl = gsap.timeline();
+                tl.to(".loading__ani", {duration: 0.4, opacity: 0}, "1")
+                tl.to(".loading__text", {duration: 0.4, opacity: 0}, "1")
+                tl.to(".loading", {duration: 0.4, width: 0})
+                tl.to(".sec1 img ", {duration: 0.4, opacity: 1})
+                tl.to(".circle", {duration: 0.4, left:270, rotation: 360, ease: "power2.out"})
+                tl.to(".sec1_txt", {duration: 0.8, y:0, opacity: 1, ease: "power1.out"})
+                tl.to(".section2_logo", {duration: 0.8, x:0, opacity: 1, ease: "power1.out"})
+                    },1000)
+            }
+            // imgCurrent가 99보다 크면 100으로 간주
+            if(imgCurrent > 99){
+                imgCurrent = 100;
+                }
+        }
     }
-    if(imgCurrent > 99){
-        imgCurrent = 100;
-    }
-}
-}
-loading();
+    loading();
 
         
     </script>
